@@ -108,9 +108,9 @@ Instead of a Sanity number, characters just have permanent side effects (manias,
 - Seeing something -> Sanity check (Willpower) (difficuly based on severity of the cause)
   - Success -> Gain Stress equal to the difficulty
   - Failure -> Gain Stress equal to the difficulty plus number of failures (*before* cancelling them out)
-  - Adv / Disadv -> short term effect (1 round)
+  - Advantage / Drawback -> short term effect (1 round)
       - Advantage: adrenaline rush, fearless, bonus on next san check, ...
-      - Disadvantage: scream in terror, involuntary action in combat, freeze, ...
+      - Drawback: scream in terror, involuntary action in combat, freeze, ...
 
 - If your stress goes above your limit you must make an Intellect roll with 1 difficulty dice for each point you are above your limit  
   - If you succeed nothing happens, though you must roll again if you gain more stress
@@ -118,11 +118,11 @@ Instead of a Sanity number, characters just have permanent side effects (manias,
 
 - Shaken:
   - -1 to all rolls (including sanity) until stress is reduced below limit
-  - Any Disadvantages rolled on skill checks can be used to trigger "fun stuff"! (phobias, manias, delusions, ...)
+  - Any Drawbacks rolled on skill checks can be used to trigger "fun stuff"! (phobias, manias, delusions, ...)
   - The goal should be to give the players an "oh no..." feeling when they become shaken
-  - While Shaken, the effects of (dis)advantages on sanity checks become amplified and more long-term / permanent (this includes the check that put you over the edge, not just the subsequent ones)
-    - disadvantage: Phobia, catatonia, paranoid, flee in terror, 
-    - advantage: gain a hardened "notch". (explained below)
+  - While Shaken, the effects of advantages / drawbacks on sanity checks become amplified and more long-term / permanent (this includes the check that put you over the edge, not just the subsequent ones)
+    - Drawback: Phobia, catatonia, paranoid, flee in terror, 
+    - Advantage: gain a hardened "notch". (explained below)
 
 - Stress hits 2x limit make an Intellect save or go temporarily insane / fall unconsious.
   - This follows the same pattern as the save for becoming Shaken. i.e. the difficulty is how far you're above your limit (limit x2 in this case), and failing the save makes it happen while succeeding postpones it a bit.
@@ -230,7 +230,7 @@ If you roll advantages you can make a single hit into a critical hit for each ad
 
 
 
-### Resolving (Dis)Advantages
+### Resolving Advantages / Drawbacks
 
 (See Genesys p.104 for ideas)
 
@@ -245,7 +245,7 @@ Advantage:
   - 3:
     - ?
 
-Disadvantage:
+Drawback:
   - 1:
     - Suffer 1 stress
   - 2:
