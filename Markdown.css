@@ -1,0 +1,18 @@
+body {
+    font-family: "Alegreya";
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    text-decoration: underline;
+    font-family: "Alegreya SC";
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 1em;
+}

@@ -1,0 +1,16 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!Untold\ Aeons.md
+!Markdown.css
+!Character\ Sheet/Narrative_Cthulhu-Character_Sheet.indd
+!Character\ Sheet/Narrative_Cthulhu-Character_Sheet.pdf
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+# !*/a/b/file1.txt
+# !*/a/b/c/*
