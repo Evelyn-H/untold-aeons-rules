@@ -5,10 +5,10 @@ Untold Aeons
 
 ### Primary (all 1-5)
 
- - Dexterity    -> dodge in combat, disengaging, diving for cover, ...
- - Toughness    -> HP total, grappling, damage reduction?
- - Willpower    -> Stress limit, Sanity saves / resistance
- - Intellect    -> more starting skills, idea rolls, 
+ - Dexterity  -> move speed, dodge in combat, diving for cover, ...
+ - Toughness  -> HP total, damage reduction, ...
+ - Willpower  -> Stress limit, Sanity saves, ...
+ - Intellect  -> starting skills, idea rolls, ...
 
 Character Creation: Distribute 12 points between the 4 characteristics.
 
@@ -16,7 +16,7 @@ Character Creation: Distribute 12 points between the 4 characteristics.
 
 Stress Limit: 10 + Willpower
 
-Health: 10 + Toughness  (Maybe 2 x Toughness?)
+Health: 10 + Toughness
 
 Move Speed: 5 + Dexterity  (yards / round (about 5 seconds))
     - This is the base "walking" speed while the character is also busy fighting / shooting etc
@@ -25,22 +25,23 @@ Move Speed: 5 + Dexterity  (yards / round (about 5 seconds))
 
 ## Karma points (i.e. story / fate points)
 
-  There are two pools, the narrator and player pool. 
-  The narrator starts with one karma point, and the players pool starts with 1 point for each player.
+  There are two pools, the Narrator and player pool. 
+  The Narrator starts with one karma point, and the players pool starts with 1 point for each player.
   When a point is used it moves to the other pool. E.g. a players uses a karma point it moves to the Narrator's pool.
   This means that using a karma point can give you benefits, but will likely come back to bite you at some point in the future.
   
   - Player Use:
     - reroll dice (sorta like pushing)
-    - +2 on any roll (or maybe just +1 success?)
-    - +2 difficulty to an NPC's roll
     - deus ex machina: "good thing I brought that shovel!" (used at the Narrator's discretion)
+    - +2 on any roll
+    - +2 difficulty to an NPC's roll
  
 
   - Narrator use:
-    - trigger a hallucination/phobia/mania/... (but don't say it, just pass a note)
-    - +2 on an NPC's roll (or maybe just +1 success?)
+    - trigger a hallucination/phobia/mania/...
+    - +2 on an NPC's roll
     - +2 difficulty to a player's roll
+    - I need more here :p
 
 
 
@@ -48,16 +49,10 @@ Move Speed: 5 + Dexterity  (yards / round (about 5 seconds))
 
 ### Skill Check
 
-Opposed skill checks / perception checks:
-   - Idea: let players roll their skill, without the difficutly dice, and the narrator rolls the difficulty dice behind the screen. This way the players have some idea of how well they did but are never quite sure.
+When trying to roll a check with a skill of 0 (either cause you don't have the skill or penalties reduced it to 0):  
+Roll a d6 / UA Dice, but you only get a single success on a 6, nothing on 1-5, not even advantage on 1.
 
-
-FIGURE OUT WHAT TO DO WHEN YOU NEED TO ROLL 0!  
-Idea: Roll a d6 / UA Dice, but you only get a single success on a 6, nothing on 1-5, not even advantage on 1.
-
-#### Skill Bonus
-Skill bonus = floor(skill / 2)
-This is the number that is added to the other person's skill when assisting. Maybe? Or just 1
+Idea: When appropriate, let players roll their skill but without the difficutly dice, and the Narrator rolls the difficulty dice behind the screen. This way the players have some idea of how well they did but are never quite sure.
 
 
 ### Standard Skills
@@ -65,7 +60,7 @@ This is the number that is added to the other person's skill when assisting. May
 Standard skills all start at 1, professional skills must be learned (either in character creation or during play)
 
 - Basic:
-  - athletics
+  - Athletics
   - Driving
   - First Aid
   - Investigation
@@ -76,24 +71,27 @@ Standard skills all start at 1, professional skills must be learned (either in c
   - Stealth
   - Streetwise
   - Survival
+
 - Social:
   - Charm
   - Deception
   - Insight
   - Intimidation
   - Persuasion
-  - English
+
 - Combat:
   - Brawl
-  - Handgun
-  - Rifle / Shotgun
+  - Firearms
+
+- Languages:
+  - English
 
   
 ### Character Creation & Improvement
   The character's background has a set of starting skill levels,
   and on top of that players get ___ starting xp to freely spend.
   
-  Players get additional xp based on the Intelligence stat.
+  Players get additional xp based on the Intelligence stat. Or not, it'd be nice to have character XP be the same for everyone. But I do want some way to have Intellect influence how good your statting skills and / or imporvement is.
 
   - Improving a skill: 10 * current rank xp
     - this means that getting a skill from 1 to 5 takes 100 xp
@@ -105,7 +103,7 @@ Standard skills all start at 1, professional skills must be learned (either in c
     
 ## Stress & Sanity
 
-(Or... What about no sanity at all, but instead just have permanent side effects (manias, phobias, ...) when stress goes above the limit. It would provide the same roleplay elements without adding another stat to keep track of. Even the "recovering in a mental ward" could be kept as a way to get rid of those traumas.)
+Instead of a Sanity number, characters just have permanent side effects (manias, phobias, ...) when stress goes above the limit. These can then be roleplayed and can also change over time. (e.g. "recovering in a mental ward" as a way to getting rid of them)
 
 - Seeing something -> Sanity check (Willpower) (difficuly based on severity of the cause)
   - Success -> Gain Stress equal to the difficulty
@@ -120,35 +118,36 @@ Standard skills all start at 1, professional skills must be learned (either in c
 
 - Shaken:
   - -1 to all rolls (including sanity) until stress is reduced below limit
-  - Disadvantages can be used to trigger "fun stuff"! (phobias, manias, delusions, ...)
+  - Any Disadvantages rolled on skill checks can be used to trigger "fun stuff"! (phobias, manias, delusions, ...)
   - The goal should be to give the players an "oh no..." feeling when they become shaken
-  - While Shaken, the effects of (dis)advantages become amplified and more long-term / permanent (this includes the check that put you over the edge, not just the subsequent ones)
+  - While Shaken, the effects of (dis)advantages on sanity checks become amplified and more long-term / permanent (this includes the check that put you over the edge, not just the subsequent ones)
     - disadvantage: Phobia, catatonia, paranoid, flee in terror, 
-    - advantage: hardened?
+    - advantage: gain a hardened "notch". (explained below)
 
-- Stress hits 2x limit make an Intellect save or Faint / Fall Unconsious (Going temporarily insane would probably be better)
-  (same mechanic as above)
+- Stress hits 2x limit make an Intellect save or go temporarily insane / fall unconsious.
+  - This follows the same pattern as the save for becoming Shaken. i.e. the difficulty is how far you're above your limit (limit x2 in this case), and failing the save makes it happen while succeeding postpones it a bit.
 
-Recovering Stress: Once a day you make a difficulty 0 Willpower check. If your stress is below your limit you lose 1 stress for every success. If it is above your limit you lose stress equal to half the number of successes (rounded down) 
+### Recovering Stress
+Once a day you make a difficulty 0 Willpower check. If your stress is below your limit you lose 1 stress for every success. If it is above your limit you lose stress equal to half the number of successes (rounded down) 
 
 
 ### Becoming Hardened
 
-Whenever you pass a sanity check of a difficulty higher than your current hardened level in that category *while Shaken* you gain a "hardened notch". When you have three "notches" your hardened level increases by one. (or maybe advantages while shaken instead?)
+Whenever you roll an advantage on a Sanity check *while Shaken* you gain a "hardened notch" in the respective category (Violence, Helplessness, or Unnatural). When you have three "notches" your hardened level increases by one. 
 
 Hardened levels act like the mental equivalent of armor, reducing the stress "damage" you take by your hardened level in that category.
 
-Being hardened also affects and changes the personality of the character, becoming more cold and uncaring.
+Being hardened also affects and changes the personality of the character, becoming more cold and uncaring for example.
+
 
 ### Goals for sanity mechanics
-  - Permanent Mental Trauma
-  - Harden over time? (stress "armor")
+  - Mental Trauma instead of a "Sanity" stat
+  - Harden over time (i.e. stress "armor")
   - Temporary Positive Effects (Adrenaline rush, ...)
   - Temporary Negative Effects (Flee, ...)
   - Stress gain from Sanity checks
   - Shaken when >= Stress Limit
-  - Faint when >= 2x Stress Limit
-  - Different types of sanity check?
+  - Go insane / faint when >= 2x Stress Limit
   - Give players more agency in the outcome of sanity checks? (like Trail of Cthulhu)
 
   
@@ -157,8 +156,7 @@ Being hardened also affects and changes the personality of the character, becomi
 
 Goal for combat: Every roll should be meaningful, not just endless "roll to hit, roll for damage, repeat" 
 
-Okay, I should *really* make the health system more analogous to the stress system!  
-Something like:
+The health / wounds system is very analogous to the stress system.
 
 - wound limit: 10 + Toughness
 
@@ -172,7 +170,7 @@ Something like:
 
 - Damage taken > 2x limit: make a Toughness save or Die  
   (same mechanic as above)  
-  Additionally, make another save every X minutes until you recieve successful medical care (First Aid, Medicine, ...)
+  Additionally, make another save every time you take additional damage (including the damage from being Severely Injured).
   
 
 Additionally: feel free to ask for stress rolls when significant injuries are suffered. This is done at the discretion of the Narrator
@@ -191,9 +189,9 @@ Initiating side (*Fast*) **>** Defending side (*Fast*) **>** Initiating side (*S
 
 If multiple combatants go at the same time they can choose the order in which they act.
 
-
 Surprise?  
 This already kinda covers surprise! so no specific suprise mechanic
+
 
 ### Attack Roll
 
@@ -224,9 +222,9 @@ Base difficulty:
 
 The combatant who's being shot at has the option to try diving away (only if they're aware they're being shot at). If they choose to do so the difficulty of the shot is increased by half the target's Dexterity (rounding *up*), however, the person diving for cover will be prone until they get up again (which takes an action).
 
-what about auto fire?  
+what about auto fire / rapid fire?  
 
-Weapon Trait: **Auto Fire  \<N\>**
+Weapon Trait: **Rapid Fire  \<N\>**
 When you use this weapon you may choose to rapidly fire many shots instead of just one. If you do this you take 1 penalty dice to your Firearms skill. Then, if your attack succeeds, you manage to hit a number of shots up to your MoS (Margin of Success), but never more than **N**. Each shot deals damage as usual (base damage + #S)
 If you roll advantages you can make a single hit into a critical hit for each advantage you rolled.
 
@@ -272,13 +270,8 @@ Melee weapons will often deal extra damage based on your Toughness, this is deno
 Unarmed attacks have a base damage of "0+", i.e. your Toughness without any bonuses
 
 
-How to handle shotguns?
+How to handle shotguns? No clue :p
 
 
 ## Open Questions
-
-  - Pusing rolls?
-    - Okay, Idea:
-      What if players can push a roll by spending a Karma point. Makes those more interesting and narratively makes sense too!
-  - Stress from (dis)adv or not?
   - What a bout a RQ-esque Passions mechanic?
