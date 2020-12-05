@@ -49,8 +49,17 @@ Move Speed: 5 + Dexterity  (yards / round (about 5 seconds))
 
 ### Skill Check
 
+The basic dice roll has two "pools" of dice, your skill dice and the difficulty dice. 
+You roll a number of d6 dice equal to your skill level (plus or minus and bonuses / penalties), and similarly, you also roll a number of d6 dice equal to the difficulty. You don't add up the values of these dice, but instead you count successes and failures.
+
+For skill dice: Rolling a 5 counts as a single success, and a 6 as two successes.  
+For difficulty dice: Rolling a 5 counts as a single failure, and a 6 as two failures.  
+If you rolled more successes than failures you succeed, otherwise you fail.
+
+In addition to this, whenever you roll a 1 on a skill dice you generate an "Advantage", and when you roll a 1 on a difficulty dice you generate a "Drawback". These cancel each other out. These don't affect whether you succeed or fail, but they add additional effects to your roll.
+
 When trying to roll a check with a skill of 0 (either cause you don't have the skill or penalties reduced it to 0):  
-Roll a d6 / UA Dice, but you only get a single success on a 6, nothing on 1-5, not even advantage on 1.
+Roll a d6, but you only get a single success on a 6, nothing on 1-5, not even advantage on 1.
 
 Idea: When appropriate, let players roll their skill but without the difficutly dice, and the Narrator rolls the difficulty dice behind the screen. This way the players have some idea of how well they did but are never quite sure.
 
