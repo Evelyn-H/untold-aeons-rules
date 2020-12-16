@@ -8,6 +8,11 @@
 !Character\ Sheet/Narrative_Cthulhu-Character_Sheet.indd
 !Character\ Sheet/Narrative_Cthulhu-Character_Sheet.pdf
 
+!Untold\ Aeons.tex
+!Untold\ Aeons.pdf
+!chapters/*.tex
+!images/*
+
 # ...even if they are in subdirectories
 !*/
 

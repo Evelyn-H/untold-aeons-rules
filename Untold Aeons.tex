@@ -1,0 +1,226 @@
+%%% DOCUMENTCLASS 
+%%%-------------------------------------------------------------------------------
+
+\documentclass[
+    statementpaper, % paper size (statement = 8.5 x 5.5 in)
+    11pt, % Type size.
+    % article,
+    oneside, 
+    onecolumn, % Only one column of text on a page.
+    % openright, % Each chapter will start on a recto page.
+    % openleft, % Each chapter will start on a verso page.
+    openany, % A chapter may start on either a recto or verso page.
+]{memoir}
+
+%%% PACKAGES 
+%%%------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % If utf8 encoding
+% \usepackage[lantin1]{inputenc} % If not utf8 encoding, then this is probably the way to go
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage[latin, english]{babel} % English please
+\usepackage[final]{microtype} % Less badboxes
+
+\usepackage{amsmath,amssymb,mathtools} % Math
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{tabularx} % extra table shenanigans
+\usepackage{tabulary}
+\usepackage{multirow}
+% \usepackage{array}
+\newcommand{\centercell}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\tableheader}[1]{\multicolumn{1}{c}{\textbf{#1}}}
+\newcommand{\tableheaderspan}[2]{\multicolumn{#1}{c}{\textbf{#2}}}
+\newcommand{\tablesubheader}[1]{\multicolumn{1}{c}{#1}}
+
+% \usepackage{tikz} % Figures
+\usepackage{graphicx} % Include figures
+\graphicspath{{images/}}
+
+% alegreya!
+\usepackage{Alegreya}
+\renewcommand*\oldstylenums[1]{{\AlegreyaOsF #1}}
+
+\usepackage{xifthen} % for easy-to-use conditionals (specifically \ifthenelse)
+\usepackage{xcolor} % rainbows!
+\usepackage{enumitem} % lists
+\setlist{itemsep=0.25ex}
+
+%%% PAGE LAYOUT 
+%%%------------------------------------------------------------------------------
+
+% \setlrmarginsandblock{0.15\paperwidth}{*}{1} % Left and right margin
+% \setulmarginsandblock{0.2\paperwidth}{*}{1}  % Upper and lower margin
+\setlrmarginsandblock{0.5in}{*}{1} % Left and right margin
+\setulmarginsandblock{1.0in}{*}{1}  % Upper and lower margin
+\checkandfixthelayout
+
+
+%%% NEW COMMANDS
+%%%------------------------------------------------------------------------------
+
+% \newcommand{\p}{\partial} %Partial
+% Or what ever you want
+
+%%% TABLE OF CONTENTS
+%%%------------------------------------------------------------------------------
+
+\maxtocdepth{section} % Only parts, chapters and sections in the table of contents
+\settocdepth{section}
+
+\AtEndDocument{\addtocontents{toc}{\par}} % Add a \par to the end of the TOC
+
+%%% INTERNAL HYPERLINKS
+%%%-------------------------------------------------------------------------------
+
+\usepackage[pdfusetitle]{hyperref}   % Internal hyperlinks
+\hypersetup{
+    pdfborder={0 0 0},      % No borders around internal hyperlinks
+}
+\usepackage{memhfixc}   % some memoir - hyperref fix
+
+%%% THE DOCUMENT
+%%% Where all the important stuff is included!
+%%%-------------------------------------------------------------------------------
+
+% \setlength{\parskip}{0.5\baselineskip}
+% \setlength{\parindent}{0pt}
+\nonzeroparskip % recommended by memoir
+
+
+% \pagestyle{ruled}
+
+% define what goes where in the header
+% chapter into \leftmark, number shown, nothing before the
+% number and a dot and space after it
+% \createmark{chapter}{left}{shownumber}{}{. }
+\createmark{chapter}{left}{shownumber}{Chapter }{: }
+% section into \rightmark
+\createmark{section}{right}{nonumber}{}{}
+
+\nouppercaseheads
+
+% \copypagestyle{chapter}{headings} % make `chapter` inherit from `headings`
+% % \makeoddfoot{chapter}{}{}{}
+% % \makeevenfoot{chapter}{}{}{}
+% % \makeevenhead{chapter}
+% %     {\small\thepage}
+% %     {\small\scshape}
+% %     {\small\scshape}
+% % \makeoddhead{chapter}
+% %     {\small\scshape}
+% %     {\small\scshape}
+% %     {\small\thepage}
+% % \makeheadrule{chapter}{\textwidth}{.2pt}
+% \makeevenhead{chapter}{}{}{}
+% \makeoddhead{chapter}{}{}{}
+% \makeheadrule{chapter}{\textwidth}{.0pt}
+
+
+% \makeevenhead{headings}
+%     {\small\thepage}
+%     {\small\scshape\leftmark}
+%     {\small\scshape}
+% \makeoddhead{headings}
+%     {}
+%     {\small\scshape\rightmark}
+%     {\small\thepage}
+% \makeheadrule{headings}{\textwidth}{.2pt}
+\makeoddhead{headings}
+    {}
+    {\small\scshape\leftmark\enspace \ifthenelse{\equal{\rightmark}{}}{}{---}\enspace\rightmark}
+    {} % {\small\thepage}
+    \makeoddfoot{headings}{}{\small\thepage}{}
+    \makeevenfoot{headings}{}{\small\thepage}{}
+\makeheadrule{headings}{\textwidth}{.2pt}
+
+\chapterstyle{dash}
+\setlength{\beforechapskip}{0\onelineskip}
+\renewcommand{\chapterheadstart}{}
+\renewcommand{\chaptitlefont}{\normalfont\scshape\huge\bfseries}
+\renewcommand{\chapnamefont}{\normalfont\scshape\Large\bfseries}
+\renewcommand{\chapnumfont}{\normalfont\scshape\Large\bfseries}
+
+\renewcommand{\printchapternum}{
+    \centering \chapnumfont 
+    \rule[0.5\midchapskip]{1em}{0.4pt} 
+    \;Chapter \thechapter\;
+    \rule[0.5\midchapskip]{1em}{0.4pt}
+}
+
+% \setsecnumdepth{subsection}
+% \setsecheadstyle{\Large\scshape\bfseries\raggedright}
+% \setsubsecheadstyle{\Large\scshape\bfseries\raggedright}
+% \setsubsubsecheadstyle{\normalsize\scshape\bfseries\raggedright}
+\setsecnumdepth{chapter}
+\setsecheadstyle{\Large\scshape\bfseries\raggedright}
+\setsubsecheadstyle{\normalsize\scshape\bfseries\raggedright}
+\setsubsubsecheadstyle{\normalsize\scshape\itseries\raggedright}
+
+% \renewcommand{\chapnumfont}{\chaptitlefont}    % To harmonise the font sizes
+% \renewcommand{\chapnamefont}{\chaptitlefont}   % idem
+
+
+% \let\oldafterchapternum\afterchapternum
+% \renewcommand{\afterchapternum}{:\par\nobreak}        % To set the line
+
+% custom command for chapter titles with a subtitle
+\newcommand{\chapterwithsubtitle}[2] {
+    \let\oldafterchaptertitle\afterchaptertitle % save the old macro
+    \renewcommand{\afterchaptertitle}{ % and temorarily replace it
+        \oldafterchaptertitle
+        \vspace{-1\afterchapskip} % undo the vertical spacing
+        % print the subtitle
+        \normalfont \centering \scshape \itshape \Large \textcolor{gray}{#2}
+        \par
+        % and re-apply the vertical spacing
+        \vspace{\afterchapskip}
+    }
+    \chapter{#1} % make the actual chapter
+    % and re-instate the original version of the command
+    \let\afterchaptertitle\oldafterchaptertitle
+}
+
+
+\author{Evelyn Hobert}
+\title{Untold Aeons}
+
+\usepackage{lipsum} % Just to put in some text
+
+\begin{document}
+% \setcounter{page}{0}
+\titlingpageend{\clearforchapter}{\clearforchapter}
+\begin{titlingpage*} % the starred version doesn't reset the page number
+    \begin{center}
+        \vspace*{2in}
+        \Huge \textsc{\textbf{\thetitle}}
+        % \vspace{0.5cm}
+        % Thesis Subtitle
+        % \vspace{1.5cm}
+        \vfill
+        \tiny \theauthor \par \today
+    \end{center}
+\end{titlingpage*}
+
+
+% \frontmatter
+
+% \maketitle
+% \clearpage
+
+% \mainmatter
+
+\tableofcontents* % the starred version doesn't list the TOC in the TOC
+\clearpage
+
+% \mainmatter
+
+% \include{chapters/intro}
+
+
+\include{chapters/rules}
+
+
+\backmatter
+
+
+\end{document}
