@@ -1,0 +1,29 @@
+%%% TABLE & LIST COMMANDS
+%%%---------------
+\newcommand{\centercell}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\tableheader}[1]{\multicolumn{1}{c}{\textbf{#1}}}
+\newcommand{\tableheaderspan}[2]{\multicolumn{#1}{c}{\textbf{#2}}}
+\newcommand{\tablesubheader}[1]{\multicolumn{1}{c}{#1}}
+
+\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
+% \newcommand{\li}[1]{\item{#1}}
+
+
+%%% CHAPTER SUBTITLES
+%%%------------------
+\newcommand{\chapterwithsubtitle}[2] {
+    \let\oldafterchaptertitle\afterchaptertitle % save the old macro
+    \renewcommand{\afterchaptertitle}{ % and temorarily replace it
+        \oldafterchaptertitle
+        \vspace{-1\afterchapskip} % undo the vertical spacing
+        % print the subtitle
+        \normalfont \centering \scshape \itshape \Large \textcolor{gray}{#2}
+        \par
+        % and re-apply the vertical spacing
+        \vspace{\afterchapskip}
+    }
+    \chapter{#1} % make the actual chapter
+    % and re-instate the original version of the command
+    \let\afterchaptertitle\oldafterchaptertitle
+}

@@ -1,0 +1,111 @@
+%%% MAIN LAYOUT 
+%%%------------
+% \setlrmarginsandblock{0.15\paperwidth}{*}{1} % Left and right margin
+% \setulmarginsandblock{0.2\paperwidth}{*}{1}  % Upper and lower margin
+\setlrmarginsandblock{0.5in}{*}{1} % Left and right margin
+\setulmarginsandblock{1.0in}{*}{1}  % Upper and lower margin
+\checkandfixthelayout
+
+
+%%% TABLE OF CONTENTS
+%%%-------------------
+\maxtocdepth{section} % Only parts, chapters and sections in the table of contents
+\settocdepth{section}
+
+\AtEndDocument{\addtocontents{toc}{\par}} % Add a \par to the end of the TOC
+
+
+%%% PARAGRAPHS
+%%%-----------
+% \setlength{\parskip}{0.5\baselineskip}
+% \setlength{\parindent}{0pt}
+\nonzeroparskip % recommended by memoir
+
+
+%%% PAGE HEADERS
+%%%-------------
+% define what goes where in the header
+% chapter into \leftmark, number shown, nothing before the
+% number and a dot and space after it
+% \createmark{chapter}{left}{shownumber}{}{. }
+\createmark{chapter}{left}{shownumber}{Chapter }{: }
+% section into \rightmark
+\createmark{section}{right}{nonumber}{}{}
+
+\nouppercaseheads
+
+% \makeevenhead{headings}
+%     {\small\thepage}
+%     {\small\scshape\leftmark}
+%     {\small\scshape}
+% \makeoddhead{headings}
+%     {}
+%     {\small\scshape\rightmark}
+%     {\small\thepage}
+% \makeheadrule{headings}{\textwidth}{.2pt}
+\makeoddhead{headings}
+    {}
+    {\small\scshape\leftmark\enspace \ifthenelse{\equal{\rightmark}{}}{}{---}\enspace\rightmark}
+    {} % {\small\thepage}
+    \makeoddfoot{headings}{}{\small\thepage}{}
+    \makeevenfoot{headings}{}{\small\thepage}{}
+\makeheadrule{headings}{\textwidth}{.2pt}
+
+
+%%% CHAPTER TITLES
+%%%---------------
+% \chapterstyle{dash}
+\chapterstyle{default}
+% \setlength{\beforechapskip}{5\onelineskip}
+
+\setlength{\beforechapskip}{-2.5\baselineskip-\topskip}
+\setlength{\beforechapskip}{0pt}
+\setlength{\afterchapskip}{1\baselineskip}
+% \let\oldchapterheadstart\chapterheadstart
+% \renewcommand{\chapterheadstart}{}
+\renewcommand{\chapterheadstart}{\vspace*{-2.5\baselineskip-1\topskip}}
+
+% this lines the chapter dash up with the header-rule on other pages
+% \renewcommand{\chapterheadstart}{\vspace*{-2.5\baselineskip-1\topskip}}
+% \renewcommand{\chapterheadstart}{}
+\renewcommand{\chaptitlefont}{\normalfont\scshape\huge\bfseries}
+\renewcommand{\chapnamefont}{\normalfont\scshape\Large\bfseries}
+\renewcommand{\chapnumfont}{\normalfont\scshape\Large\bfseries}
+\settoheight{\midchapskip}{\chapnumfont 1}
+
+
+\renewcommand{\printchapternum}{
+    \centering \chapnumfont 
+    \rule[0.5\midchapskip]{1em}{0.4pt} 
+    \;Chapter \thechapter\;
+    \rule[0.5\midchapskip]{1em}{0.4pt}
+}
+\renewcommand*{\printchapternonum}{
+    \centering \chapnumfont
+    \vphantom{\chapnumfont 1}
+    \afterchapternum
+}
+
+\renewcommand*{\printchaptername}{}
+\renewcommand*{\chapternamenum}{}
+
+\renewcommand*{\afterchapternum}{\par\nobreak\vskip 0.5\onelineskip}
+\renewcommand*{\printchaptertitle}[1]{\centering \chaptitlefont #1}
+
+% \let\oldafterchapternum\afterchapternum
+% \renewcommand{\afterchapternum}{\par\nobreak}        % To set the line
+
+
+% \renewcommand{\chapnumfont}{\chaptitlefont}    % To harmonise the font sizes
+% \renewcommand{\chapnamefont}{\chaptitlefont}   % idem
+
+%%% OTHER HEADERS
+%%%--------------
+% \setsecnumdepth{subsection}
+% \setsecheadstyle{\Large\scshape\bfseries\raggedright}
+% \setsubsecheadstyle{\Large\scshape\bfseries\raggedright}
+% \setsubsubsecheadstyle{\normalsize\scshape\bfseries\raggedright}
+\setsecnumdepth{chapter}
+\setsecheadstyle{\Large\scshape\bfseries\raggedright}
+\setsubsecheadstyle{\normalsize\scshape\bfseries\raggedright}
+\setsubsubsecheadstyle{\normalsize\scshape\itseries\raggedright}

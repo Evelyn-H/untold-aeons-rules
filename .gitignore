@@ -10,7 +10,7 @@
 
 !Untold\ Aeons.tex
 !Untold\ Aeons.pdf
-!chapters/*.tex
+!source/*.tex
 !images/*
 
 # ...even if they are in subdirectories
