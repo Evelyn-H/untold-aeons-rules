@@ -3,8 +3,8 @@
 
 # But not these files...
 !.gitignore
-!Untold\ Aeons.md
-!Markdown.css
+# !Untold\ Aeons.md
+# !Markdown.css
 !Character\ Sheet/Narrative_Cthulhu-Character_Sheet.indd
 !Character\ Sheet/Narrative_Cthulhu-Character_Sheet.pdf
 
