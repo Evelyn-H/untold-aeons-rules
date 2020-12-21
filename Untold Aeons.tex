@@ -20,6 +20,7 @@
 \usepackage{tabulary}
 \usepackage{multirow}
 % \usepackage{array}
+\usepackage{threeparttable}
 
 % \usepackage{tikz} % Figures
 \usepackage{graphicx} % Include figures
@@ -43,6 +44,11 @@
     linktoc=all
 }
 \usepackage{memhfixc}   % some memoir - hyperref fix
+
+% \usepackage[toc]{multitoc}
+% \renewcommand*{\multicolumntoc}{2}
+% \setlength{\columnseprule}{0.5pt}
+% \setlength{\columnsep}{2\baselineskip}
 
 \include{source/layout}
 \include{source/commands}
@@ -77,14 +83,32 @@
 
     %%% TABLE OF CONTENTS
     %%%------------------
-    % this temporarily changes the chapter rendering to move the toc up 
     {
+        
+        % some shenanigans to temporarily load a smaller font size setup
+        % to make the toc entries smaller, but *without* affecting the heading
+        \makeatletter
+        \let\old@afterheading\@afterheading
+        \renewcommand{\@afterheading}{
+            \let\savednewcommand\newcommand
+            \let\newcommand\renewcommand
+            \makeatletter
+            % \input{mem9.clo}
+            \makeatother
+            \let\newcommand\savednewcommand
+        }
+            
+        % this temporarily changes the chapter rendering to move the toc up 
         % \setlength{\afterchapskip}{1\baselineskip}
         % \let\oldchapterheadstart\chapterheadstart
         % \renewcommand{\chapterheadstart}{\vspace*{-5\baselineskip-1\topskip}}
         \tableofcontents* % the starred version doesn't list the TOC in the TOC
         \clearpage
         % \renewcommand{\chapterheadstart}{\oldchapterheadstart}
+        
+        % undo font size shenanigans
+        \let\@afterheading\old@afterheading
+        \makeatother
     }
 
 
