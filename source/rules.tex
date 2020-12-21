@@ -1,3 +1,6 @@
+% good ideas for general content layout:
+% https://www.reddit.com/r/RPGdesign/comments/kgk19y/anything_obvious_missing/ggfi13i/
+
 \chapter{Stats}
 \section{Primary Stats}
 
@@ -179,7 +182,9 @@ therefore these have a starting value of 0.
 The character's background has a set of starting skill levels,
 and on top of that players get \_\_\_ starting xp to freely spend.
 
-Players get additional xp based on the Intelligence stat. Or not, it'd be nice to have character XP be the same for everyone. But I do want some way to have Intellect influence how good your statting skills and / or imporvement is.
+Players get additional xp based on the Intelligence stat. 
+Or not, it'd be nice to have character XP be the same for everyone. 
+But I do want some way to have Intellect influence how good your statting skills and / or improvement is.
 
 
 \begin{center}
@@ -210,7 +215,7 @@ they should also describe what's actually happening that would change the outcom
 For example: a player using a karma point to re-roll an Investigation check could say, 
 "...".
 
-  \begin{itemize}
+\begin{itemize}
     \item \textbf{Player Uses:}
     \begin{itemize}
         \item Reroll dice (sorta like pushing)
@@ -252,11 +257,11 @@ Any Advantages or Drawbacks rolled will result in a short term effect.
     \end{tabular}
 \end{center}
 
-If your stress goes above your limit you must make an Intellect roll with 1 difficulty dice for each point you are above your limit.
+If your stress goes above your limit you must make an Willpower roll with 1 difficulty dice for each point you are above your limit.
 If you succeed nothing happens, though you must roll again if you gain more stress,
 but if you fail you become Shaken.
 
-If your Stress goes above \textit{twice} limit make an Intellect save or go temporarily insane / fall unconsious.
+If your Stress goes above \textit{twice} limit make an Willpower save or go temporarily insane / fall unconsious.
 This follows the same pattern as the save for becoming Shaken. So the difficulty is how far you're above your limit (twice the limit in this case), and failing the save makes it happen while succeeding postpones it a bit.
 
 
@@ -342,33 +347,87 @@ The side initiating the fight also goes first. So, the turn order is as follows:
 \section{Attack Roll}
 
 When being attacked, either:
-  - **Dodge**: Roll Dex to avoid, *but* fall prone afterwards
-    - Ties are in favour of the defender
-    - Defender takes no damage if they win
-  - **Defend**: Roll Brawl to defend yourself
-    - Ties are in favour of the defender
-    - Defender takes no damage if they win
-  - **Fight Back**: Roll Brawl to fight back  
-    - Ties are in favour of the attacker
-    - Defender takes no damage if they win *and* land a hit of their own
-  - If both combatants get 0 successes nothing happens 
+    - **Dodge**: Roll Dex to avoid, *but* fall prone afterwards
+        - Ties are in favour of the defender
+        - Defender takes no damage if they win
+    - **Defend**: Roll Brawl to defend yourself
+        - Ties are in favour of the defender
+        - Defender takes no damage if they win
+    - **Fight Back**: Roll Brawl to fight back  
+        - Ties are in favour of the attacker
+        - Defender takes no damage if they win *and* land a hit of their own
+    - If both combatants get 0 successes nothing happens 
 
+% \newcommand{\fancytable}[3]{
+%   \begin{center}
+%       \begin{threeparttable}
+%           \noindent\begin{tabular}{@{}#1@{}}
+%               #2
+%               % \cmidrule(l){3-5}
+%               \toprule
+%               #3
+%               \bottomrule
+%           \end{tabular}
+%           % \begin{tablenotes}
+%           %     \footnotesize
+%           %     \item[*] The Defender also falls prone.
+%           % \end{tablenotes}
+%       \end{threeparttable}
+%   \end{center}
+% }
+
+% {
+% \small
+% \fancytable{lcccc}{
+%     \multirow{2}{*}[-3pt]{\textbf{Action}} & \multirow{2}{*}[-0pt]{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \tableheaderspan{3}{Outcome}\\
+%     \cmidrule(l){3-5}
+%     & & \tablesubheader{Attacker Wins} & \tablesubheader{Defender Wins} & \tablesubheader{Tie}\\
+% }{
+%     \textbf{Dodge}      & Dex   & Attacker Hits & No Hit\tnote{*} & No Hit\\
+%     \addlinespace[1ex]
+%     \textbf{Defend}     & Brawl & Attacker Hits & No Hit & No Hit\\
+%     \addlinespace[1ex]
+%     \textbf{Fight Back} & Brawl & Attacker Hits & Defender Hits & Attacker Hits\\
+% }
+% }
+
+\begin{center}
+    \begin{threeparttable}
+      \small
+      \noindent\begin{tabular}{@{}lcccc@{}}
+          \multirow{2}{*}[-3pt]{\textbf{Action}} & \multirow{2}{*}[-0pt]{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \tableheaderspan{3}{Outcome}\\
+          \cmidrule(l){3-5}
+          & & \tablesubheader{Attacker Wins} & \tablesubheader{Defender Wins} & \tablesubheader{Tie}\\
+          \toprule
+          \textbf{Dodge}      & Dex   & Attacker Hits & No Hit\tnote{*} & No Hit\\
+          \addlinespace[1ex]
+          \textbf{Defend}     & Brawl & Attacker Hits & No Hit & No Hit\\
+          \addlinespace[1ex]
+          \textbf{Fight Back} & Brawl & Attacker Hits & Defender Hits & Attacker Hits\\
+          \bottomrule
+      \end{tabular}
+      \begin{tablenotes}
+        \footnotesize
+        \item[*] The Defender also falls prone.
+      \end{tablenotes}
+    \end{threeparttable}
+\end{center}
 
 \section{Firearms}
 
 Ranged Attack:  
 Base difficulty: 
-  - Point blank: 1
-  - less than weapon range: 2
-  - less than 2x weapon range: 3
-  - etc.
+    - Point blank: 1
+    - less than weapon range: 2
+    - less than 2x weapon range: 3
+    - etc.
 
 +1 difficulty when firing at moving target, partial cover, ...
 -1 difficulty when firing at ...
 
 The combatant who's being shot at has the option to try diving away (only if they're aware they're being shot at). If they choose to do so the difficulty of the shot is increased by half the target's Dexterity (rounding *up*), however, the person diving for cover will be prone until they get up again (which takes an action).
 
-what about auto fire / rapid fire?  
+what about rapid fire?  
 
 Weapon Trait: \textbf{Rapid Fire  <N>}
 When you use this weapon you may choose to rapidly fire many shots instead of just one. If you do this you take 1 penalty dice to your Firearms skill. Then, if your attack succeeds, you manage to hit a number of shots up to your MoS (Margin of Success), but never more than \textbf{N}. Each shot deals damage as usual (base damage + \#S)
@@ -381,24 +440,24 @@ If you roll advantages you can make a single hit into a critical hit for each ad
 (See Genesys p.104 for ideas)
 
 Advantage:
-  - 1:
-    - +1 on next allied skill check
-    - notice something useful
-    - -1 to target enemy next skill check
-  - 2:
-    - extra maneuver
-    - bypass cover/armor/...
-  - 3:
-    - ?
+    - 1:
+        - +1 on next allied skill check
+        - notice something useful
+        - -1 to target enemy next skill check
+    - 2:
+        - extra maneuver
+        - bypass cover/armor/...
+    - 3:
+        - ?
 
 Drawback:
   - 1:
-    - Suffer 1 stress
+      - Suffer 1 stress
   - 2:
-    - opponent gets free maneuver
-    - +1 to all opponents when targeting this player until next turn
+      - opponent gets free maneuver
+      - +1 to all opponents when targeting this player until next turn
   - 3:
-    - ?
+      - ?
   
 
 
@@ -427,8 +486,30 @@ How to handle shotguns? No clue :p
         \item Maybe remove Toughness as armor?
         \ul{
             \item Or use $\lfloor\frac{Toughness}{2}\rfloor$ instead?
+            \item This would mess with the Piercing trait too
         }
+        \item Or use $5+Toughness$ for wound limit? (could do this for stress too tbh)
         \item Re-think crits / chances for extra high damage
-        \item something else?
     }
+    \item All Stress saves should be Willpower
+    \item \ul{
+        \item This does mean we need more things to do with Intellect.
+        \ul{
+            \item Magic / reading tomes is one option
+            \item Idea rolls; maybe make them more mechanically relevant
+            \item Honestly, just starting skills, idea rolls, and magic is \textit{probably} enough...
+        }
+    }
+    \item need more Karma uses (especially for the Keeper) and a reason to avoid hoarding them
+    \item Maybe remove athletics in favour of Dexterity (and rename dex?)
+}
+
+\clearpage
+\section{Playtesters}
+Thank you to everyone who's helped me with playtesting and providing valuable feedback!
+\ul{
+    \item 2Boots \textit{(@too\_boots\#8000)}
+    \item Kyle Scott \textit{(@Lord of the Kyles\#1817)}
+    \item Morgan J \textit{(@Morgan J\#3848)}
+    \item Wayne \textit{(@Wayne Rossi\#2400)}
 }
