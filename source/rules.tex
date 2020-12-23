@@ -252,7 +252,7 @@ Any Advantages or Drawbacks rolled will result in a short term effect.
         \addlinespace[1ex]
         \textbf{Advantage} & Adrenaline rush, fearless, bonus on next san check, ...\\
         \addlinespace[1ex]
-        \textbf{Drawback} & scream in terror, involuntary action in combat, freeze, ...\\
+        \textbf{Drawback} & Scream in terror, involuntary action in combat, freeze, ...\\
         \bottomrule
     \end{tabular}
 \end{center}
@@ -266,29 +266,46 @@ This follows the same pattern as the save for becoming Shaken. So the difficulty
 
 
 \subsection{Shaken}
-While you're Shaken you suffer the following consequences:
-\begin{itemize}
-    \item -1 to all rolls (including sanity) until stress is reduced below limit
-    \item Any Drawbacks rolled on skill checks can be used to trigger "fun stuff"! (phobias, manias, delusions, ...)
-    \item The goal should be to give the players an "oh no..." feeling when they become shaken
-    \item While Shaken, the effects of advantages / drawbacks on sanity checks become amplified and more long-term / permanent (this includes the check that put you over the edge, not just the subsequent ones)
-    \begin{itemize}
-        \item \textit{Drawback:} Phobia, catatonia, paranoid, flee in terror, ...
-        \item \textit{Advantage:} Gain a hardened "notch" (explained below)
-    \end{itemize}
-\end{itemize}
+\textit{The goal should be to give the players an "oh no..." feeling when they become shaken.}
 
-\section{Recovering Stress}
-Once a day you make an unopposed Willpower check. If your stress is below your limit you lose 1 stress for every success. If it is above your limit you lose stress equal to half the number of successes (rounded down) 
+When you initially become Shaken you suffer from a temporary bout of madness. 
+You are free to roleplay this however you like. 
+Additionally, the Narrator can also use Karma points to trigger 
+phobias, manias, delusions, ... for Shaken characters.
 
+
+While shaken the effects of any Advantages or Drawbacks you roll on a Sanity check become amplified.
+Drawbacks might cause you to flee in terror, become catatonic or even gain a phobia or mania.
+On the other hand, if you roll an Advantage on a Sanity check with a difficulty \textit{higher}
+than your relevant Hardened level your Hardened level increases by one.
+
+
+
+% While you're Shaken you suffer the following consequences:
+% \begin{itemize}
+%     % \item -1 to all rolls (including sanity) until stress is reduced below limit
+%     \item The Narrator can use Karma points to trigger phobias, manias, delusions, ...
+%     \item The effects of any advantages / drawbacks on sanity checks become amplified and more long-term / permanent (this includes the check that put you over the edge, not just the subsequent ones)
+%     \begin{itemize}
+%         \item \textit{Drawback:} Phobia, catatonia, paranoid, flee in terror, ...
+%         \item \textit{Advantage:} Gain a hardened "notch" (explained below)
+%     \end{itemize}
+% \end{itemize}
 
 \section{Becoming Hardened}
+Hardened levels represent how used your character is to seeing different kinds of horrors.
+There's 3 categories: \textit{Violence}, \textit{Helplessness}, and \textit{Unnatural}.
+These levels act like the mental equivalent of armor, reducing the stress "damage" 
+you take by your hardened level in the relavant category.
 
-Whenever you roll an advantage on a Sanity check *while Shaken* you gain a "hardened notch" in the respective category (Violence, Helplessness, or Unnatural). When you have three "notches" your hardened level increases by one. 
 Being hardened also affects and changes the personality of the character, becoming more cold and uncaring for example.
 
-Hardened levels act like the mental equivalent of armor, reducing the stress "damage" you take by your hardened level in that category.
 
+\section{Recovering Stress}
+Once a day you make an unopposed Willpower check. 
+If your stress is below your limit you lose 1 stress for every success. 
+If it is above your limit you lose stress equal to half the number of successes (rounded down).
+You always recover at least 1 Stress.
 
 \section{Goals for sanity mechanics}
 \begin{itemize}
@@ -328,6 +345,7 @@ Additionally, you take one damage every minute (or round?) until your receive me
 Once a day you make an unopposed Toughness check. 
 If your injuries are below your limit you heal one wound for every success. 
 If they are above your limit you heal a number of wounds equal to half the number of successes (rounded down).
+You always heal at least 1 Wound.
 
 \section{Initiative}
 There are 2 possible types of turns: Fast and Slow turns.  
@@ -481,7 +499,7 @@ How to handle shotguns? No clue :p
 \chapter{Open Questions \& Feedback}
 \ul{
     \item What a bout a RQ-esque Passions mechanic?
-    \item There isn't enough damage\dots
+    \item There isn't enough damage...
     \ul{
         \item Maybe remove Toughness as armor?
         \ul{
@@ -490,6 +508,14 @@ How to handle shotguns? No clue :p
         }
         \item Or use $5+Toughness$ for wound limit? (could do this for stress too tbh)
         \item Re-think crits / chances for extra high damage
+        \ul{
+            \item It doesn't really make sense to have crits based on advantages, 
+                that sorta goes against the "two axes of success". 
+                It'd also mean that crit hits generally have lower damage, 
+                cause advantages and successes are inversely-correlated.
+            \item Maybe crits when your MoS > some number? Maybe as a weapon trait? 
+            \item Or... Karma points for crits? This has potential! :p
+        }
     }
     \item All Stress saves should be Willpower
     \item \ul{
@@ -502,6 +528,7 @@ How to handle shotguns? No clue :p
     }
     \item need more Karma uses (especially for the Keeper) and a reason to avoid hoarding them
     \item Maybe remove athletics in favour of Dexterity (and rename dex?)
+    \item Do I \textit{really} need the 3-tally system for adapting to stress?
 }
 
 \clearpage
@@ -512,4 +539,22 @@ Thank you to everyone who's helped me with playtesting and providing valuable fe
     \item Kyle Scott \textit{(@Lord of the Kyles\#1817)}
     \item Morgan J \textit{(@Morgan J\#3848)}
     \item Wayne \textit{(@Wayne Rossi\#2400)}
+    \item ... and others!
+}
+
+\clearpage
+% mini-environment to temporarily change some layout stuff
+{
+    %  move the title up a bit more
+    \setlength{\beforechapskip}{-3.5\baselineskip-\topskip}
+    % and don't print any number stuff or "reserve space" for it
+    \renewcommand*{\printchapternonum}{}
+    % generate the chapter
+    \chapter*{Rules Summary} % the starred version makes it un-numbered
+    % increase indent to match number chapters
+    \addtocontents{toc}{\setlength{\cftchapterindent}{\cftchapternumwidth}}
+    % add it to the ToC manually, cause un-numbered ones don't get added automatically
+    \addcontentsline{toc}{chapter}{Rules Summary}
+    % and reset the indent back to what it was
+    \addtocontents{toc}{\setlength{\cftchapterindent}{0pt}}
 }
