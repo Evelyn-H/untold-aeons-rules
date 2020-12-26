@@ -1,13 +1,55 @@
 %%% TABLE & LIST COMMANDS
 %%%---------------
+\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
+\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
+% \newcommand{\li}[1]{\item{#1}}
+
 \newcommand{\centercell}[1]{\multicolumn{1}{c}{#1}}
 \newcommand{\tableheader}[1]{\multicolumn{1}{c}{\textbf{#1}}}
 \newcommand{\tableheaderspan}[2]{\multicolumn{#1}{c}{\textbf{#2}}}
 \newcommand{\tablesubheader}[1]{\multicolumn{1}{c}{#1}}
 
-\newcommand{\ol}[1]{\begin{enumerate}#1\end{enumerate}}
-\newcommand{\ul}[1]{\begin{itemize}#1\end{itemize}}
-% \newcommand{\li}[1]{\item{#1}}
+% \multicolumn{1}{c}{\bfseries\begin{tabular}{@{}c@{}}#1\end{tabular}}}
+
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadalign{cc}
+\renewcommand\theadset{\renewcommand\arraystretch{1.2}}
+\renewcommand\cellset{\renewcommand\arraystretch{1.2}}
+
+\newcommand{\tsubhead}[1]{
+    \renewcommand\theadfont{}
+    \thead{#1}
+}
+
+
+% \newcommand\nextrowtext{}
+% \newcommand\nextrow[1]{\renewcommand\nextrowtext{#1}}
+
+% \newcommand{\tableheader}[2][1]{}
+
+% the optional command is the array stretch
+\newcommand{\fancytable}[5][1.2]{
+    % \setlength{\extrarowheight}{#1}
+    \protect\renewcommand{\arraystretch}{#1}%
+    \begin{center}
+        \begin{threeparttable}
+            \noindent\begin{tabular}{@{}#2@{}}
+                #3
+                % \cmidrule(l){3-5}
+                \toprule
+                #4
+                \bottomrule
+            \end{tabular}
+            \ifthenelse{\isempty{#5}}
+            {}{
+                \begin{tablenotes}
+                    \footnotesize
+                    #5
+                \end{tablenotes}
+            }
+        \end{threeparttable}
+    \end{center}
+}
 
 
 %%% CHAPTER SUBTITLES

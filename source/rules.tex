@@ -17,36 +17,54 @@ but they're also used to calculate secondary stats and influence other mechanics
 During character creation you will distribute 12 points between the 4 characteristics.
 
 
-\begin{center}
-    \noindent\begin{tabular}{@{}l l l@{}}
-        % \textbullet & \textbf{Dexterity}: & move speed, dodge in combat, diving for cover, ...\\
-        \tableheader{Stats} & \tableheader{Used For}\\
-        \toprule
-        \textbf{Dexterity} & Move speed, dodging / diving for cover, ...\\
-        \textbf{Toughness} & HP total, damage reduction, ...\\
-        \textbf{Willpower} & Stress limit, Sanity saves, ...\\
-        \textbf{Intellect} & Starting skills, Idea rolls, ...\\
-        \bottomrule
-    \end{tabular}
-\end{center}
+% \begin{center}
+%     \noindent\begin{tabular}{@{}l l l@{}}
+%         % \textbullet & \textbf{Dexterity}: & move speed, dodge in combat, diving for cover, ...\\
+%         \tableheader{Stats} & \tableheader{Used For}\\
+%         \toprule
+%         \textbf{Agility} & Move speed, dodging / diving for cover, ...\\
+%         \textbf{Toughness} & HP total, damage reduction, ...\\
+%         \textbf{Willpower} & Stress limit, Sanity saves, ...\\
+%         \textbf{Intellect} & General Knowledge, Idea rolls, ...\\
+%         \bottomrule
+%     \end{tabular}
+% \end{center}
+
+\fancytable{lll}
+{
+    \thead{Stats} & \thead{Used for}\\
+}{
+    \textbf{Agility} & Move speed, dodging / diving for cover, ...\\
+    \textbf{Toughness} & HP total, damage reduction, ...\\
+    \textbf{Willpower} & Stress limit, Sanity saves, ...\\
+    \textbf{Intellect} & General Knowledge, Idea rolls, ...\\
+}{}
 
 \section{Secondary Stats}
 
 Secondary stats are stats that are derived from your primary stats.
 
-\begin{center}
-    \noindent\begin{tabular}{@{}l l l@{}}
-        % & \tableheader{Calculated as}\\
-        \toprule
-        \textbf{Stress Limit}  & 10 + Willpower\\
-        \textbf{Health}        & 10 + Toughness\\
-        \textbf{Move Speed}    & 5 + Dexterity\\
-        \bottomrule
-    \end{tabular}
-\end{center}
+% \begin{center}
+%     \noindent\begin{tabular}{@{}l l l@{}}
+%         % & \tableheader{Calculated as}\\
+%         \toprule
+%         \textbf{Stress Limit}  & 10 + Willpower\\
+%         \textbf{Health}        & 10 + Toughness\\
+%         % \textbf{Move Speed}    & 5 + Agility\\
+%         \bottomrule
+%     \end{tabular}
+% \end{center}
 
-Move speed represents the base "walking" speed of the character while busy fighting or shooting (in yards per round, where a round is about 6 seconds).
-In a full-on sprint characters can go up to 5 times their Move Speed per round, while a sustained run is about 2-3 times their speed per round
+\fancytable{lll}
+{}
+{
+    \textbf{Stress Limit}  & 10 + Willpower\\
+    \textbf{Health}        & 10 + Toughness\\
+    % \textbf{Move Speed}    & 5 + Agility\\
+}{}
+
+% Move speed represents the base "walking" speed of the character while busy fighting or shooting (in yards per round, where a round is about 6 seconds).
+% In a full-on sprint characters can go up to 5 times their Move Speed per round, while a sustained run is about 2-3 times their speed per round
 
 
 \chapter{Skills}
@@ -54,43 +72,60 @@ In a full-on sprint characters can go up to 5 times their Move Speed per round, 
 \section{Skill Checks}
 
 The basic dice roll has two "pools" of dice, your skill dice and the difficulty dice. 
-You roll a number of d6 dice equal to your skill level (plus or minus and bonuses / penalties), and similarly, you also roll a number of d6 dice equal to the difficulty. You don't add up the values of these dice, but instead you count successes and failures.
+You roll a number of d6 dice equal to your skill level, and similarly, you also roll a number of d6 dice equal to the difficulty. You don't add up the values of these dice, but instead you count successes and failures.
 If you rolled more successes than failures you succeed, otherwise you fail.
 
-\begin{center}
-    % \noindent\begin{tabular}{@{}c c c c c@{}}
-    %     \multirow{2}{*}[-3pt]{\textbf{Roll}} & \tableheaderspan{2}{Skill Dice} & \tableheaderspan{2}{Difficulty Dice}\\
-    %     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
-    %     & \tablesubheader{Success} & \tablesubheader{Advantage} & \tablesubheader{Failure} & \tablesubheader{Drawback}\\
-    %     \toprule
-    %     \textbf{6} & 2 & 0 & 2 & 0\\
-    %     \textbf{5} & 1 & 0 & 1 & 0\\
-    %     \textbf{4} & 1 & 0 & 1 & 0\\
-    %     \textbf{3} & 0 & 0 & 0 & 0\\
-    %     \textbf{2} & 0 & 0 & 0 & 0\\
-    %     \textbf{1} & 0 & 1 & 0 & 1\\
-    %     \bottomrule
-    % \end{tabular}
-    \noindent\begin{tabular}{@{}c c c@{}}
-        \textbf{Roll} & \textbf{Skill Dice} & \textbf{Difficulty Dice}\\
-        \toprule
-        \textbf{6} & 2 Successes & 2 Failures\\
-        \textbf{5} & 1 Success & 1 Failure\\
-        \textbf{4} & 1 Success & 1 Failure\\
-        \textbf{3} & & \\
-        \textbf{2} & & \\
-        \textbf{1} & 1 Advantage & 1 Drawback\\
-        \bottomrule
-    \end{tabular}
-\end{center}
+% \begin{center}
+%     % \noindent\begin{tabular}{@{}c c c c c@{}}
+%     %     \multirow{2}{*}[-3pt]{\textbf{Roll}} & \tableheaderspan{2}{Skill Dice} & \tableheaderspan{2}{Difficulty Dice}\\
+%     %     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+%     %     & \tablesubheader{Success} & \tablesubheader{Advantage} & \tablesubheader{Failure} & \tablesubheader{Drawback}\\
+%     %     \toprule
+%     %     \textbf{6} & 2 & 0 & 2 & 0\\
+%     %     \textbf{5} & 1 & 0 & 1 & 0\\
+%     %     \textbf{4} & 1 & 0 & 1 & 0\\
+%     %     \textbf{3} & 0 & 0 & 0 & 0\\
+%     %     \textbf{2} & 0 & 0 & 0 & 0\\
+%     %     \textbf{1} & 0 & 1 & 0 & 1\\
+%     %     \bottomrule
+%     % \end{tabular}
+%     \noindent\begin{tabular}{@{}c c c@{}}
+%         \tableheader{Roll} & \tableheader{Skill Dice} & \tableheader{Difficulty Dice}\\
+%         \toprule
+%         \textbf{6} & 2 Successes & 2 Failures\\
+%         \textbf{5} & 1 Success & 1 Failure\\
+%         \textbf{4} & 1 Success & 1 Failure\\
+%         \textbf{3} & & \\
+%         \textbf{2} & & \\
+%         \textbf{1} & 1 Advantage & 1 Drawback\\
+%         \bottomrule
+%     \end{tabular}
+% \end{center}
+
+\fancytable{ccc}
+{
+    \thead{Roll} & \thead{Skill Dice} & \thead{Difficulty Dice}\\
+}{
+    \textbf{6} & 2 Successes & 2 Failures\\
+    \textbf{5} & 1 Success & 1 Failure\\
+    \textbf{4} & 1 Success & 1 Failure\\
+    \textbf{3} & & \\
+    \textbf{2} & & \\
+    \textbf{1} & 1 Advantage & 1 Drawback\\
+}{}
 
 In addition to this, whenever you roll a 1 on a skill dice you generate an "Advantage", and when you roll a 1 on a difficulty dice you generate a "Drawback". These cancel each other out. These don't affect whether you succeed or fail, but they add additional effects to your roll.
 
-When trying to roll a check with a skill of 0 (either cause you don't have the skill or penalties reduced it to 0):  
-Roll a d6, but you only get a single success on a 6, nothing on 1-5, not even advantage on 1.
-
-\textit{Idea: When appropriate, let players roll their skill but without the difficutly dice, and the Narrator rolls the difficulty dice behind the screen. This way the players have some idea of how well they did but are never quite sure.
+% When trying to roll a check with a skill of 0 (either cause you don't have the skill or penalties reduced it to 0):  
+% Roll a d6, but you only get a single success on a 6, nothing on 1-5, not even advantage on 1.
+\textit{
+    Idea: When appropriate, let players roll their skill but without the difficutly dice, and the Narrator rolls the difficulty dice behind the screen. This way the players have some idea of how well they did but are never quite sure.
 }
+
+\subsection{Bonuses \& Penalties}
+Any situational bonuses simply add extra dice to the "skill dice" pool. 
+Similarly, situational penalties add extra dice to the "difficulty pool".
+
 
 \section{List of Skills}
 
@@ -99,44 +134,109 @@ and have a starting value of 1.
 Professional skills are skills that must be learned either in character creation or during play,
 therefore these have a starting value of 0. 
 
-\begin{center}
-    \noindent\begin{tabular}{@{}m{1in} m{3in}@{}}
-        \tableheader{Skills} & \tableheader{Remarks}\\
-        \toprule
-        \addlinespace[1ex]
-        \multicolumn{1}{c}{\textit{Basic}}\\
-        \cmidrule(r){1-1}
-        Athletics & \\
-        Driving & \\
-        First Aid & \\
-        Investigation & \\
-        Knowledge & Represents "basic" knowledge / education level. \\%Can be used instead of any specific knowledge skill, but at a penalty.\\
-        Perception & \\
-        Stealth & \\
-        Streetwise & \\
-        Survival & \\
-        \addlinespace[1ex]
-        \multicolumn{1}{c}{\textit{Social}}\\
-        \cmidrule(r){1-1}
-        Charm & \\
-        Deception & \\
-        Insight & \\
-        Intimidation & \\
-        Persuasion & \\
-        \addlinespace[1ex]
-        \multicolumn{1}{c}{\textit{Combat}}\\
-        \cmidrule(r){1-1}
-        Combat & \\
-        Firearms & \\
-        \addlinespace[1ex]
-        \multicolumn{1}{c}{\textit{Languages}}\\
-        \cmidrule(r){1-1}
-        English & \\
+% \begin{center}
+%     \noindent\begin{tabular}{@{}m{1in}m{1in}m{1in}@{}}
+%         \textbf{General} & \textbf{Social} & \textbf{Combat}\\
+%         \toprule
+%         Driving & Charm & Brawl\\
+%         \addlinespace[1ex]
+%         First Aid & Deception & Firearms\\
+%         \addlinespace[1ex]
+%         Investigation & Insight\\
+%         \addlinespace[1ex]
+%         Perception & Intimidation\\
+%         \addlinespace[1ex]
+%         Stealth & Persuasion\\
+%         \addlinespace[1ex]
+%         Streetwise\\
+%         \addlinespace[1ex]
+%         Survival\\
+%         \bottomrule
+%     \end{tabular}
+% \end{center}
 
 
-        \bottomrule
-    \end{tabular}
-\end{center}
+\fancytable[1.5]{m{1in}m{1in}m{1in}}
+{
+    \thead{General} & \thead{Social} & \thead{Combat}\\
+}{
+    Driving & Charm & Brawl\\
+    First Aid & Deception & Firearms\\
+    Investigation & Insight\\
+    Perception & Intimidation\\
+    Stealth & Persuasion\\
+    Streetwise\\
+    Survival\\
+}{}
+
+% \begin{multicols}{2}
+%     \begin{itemize}
+%         \item \textbf{General}
+%         \begin{itemize}
+%             \item Driving
+%             \item First Aid
+%             \item Investigation
+%             \item Perception
+%             \item Stealth
+%             \item Streetwise
+%             \item Survival
+%         \end{itemize}
+%         \vfill\null % colum break shenanigans
+%         \columnbreak
+%         \item \textbf{Social}
+%         \begin{itemize}
+%             \item Charm
+%             \item Deception
+%             \item Insight
+%             \item Intimidation
+%             \item Persuasion
+%         \end{itemize}
+%         \item \textbf{Combat}
+%         \begin{itemize}
+%             \item Brawl
+%             \item Firearms
+%         \end{itemize}
+%         % \item Unnatural
+%         % \begin{itemize}
+%         %     \item Mythos Knowledge
+%         % \end{itemize}
+%     \end{itemize}
+% \end{multicols}
+
+% \begin{center}
+%     \noindent\begin{tabular}{@{}m{1in} m{3in}@{}}
+%         \tableheader{Skills} & \tableheader{Remarks}\\
+%         \toprule
+%         \addlinespace[1ex]
+%         \multicolumn{1}{c}{\textit{Basic}}\\
+%         \cmidrule(r){1-1}
+%         Driving & \\
+%         First Aid & \\
+%         Investigation & \\
+%         Perception & \\
+%         Stealth & \\
+%         Streetwise & \\
+%         Survival & \\
+%         \addlinespace[1ex]
+%         \multicolumn{1}{c}{\textit{Social}}\\
+%         \cmidrule(r){1-1}
+%         Charm & \\
+%         Deception & \\
+%         Insight & \\
+%         Intimidation & \\
+%         Persuasion & \\
+%         \addlinespace[1ex]
+%         \multicolumn{1}{c}{\textit{Combat}}\\
+%         \cmidrule(r){1-1}
+%         Brawl & \\
+%         Firearms & \\
+%         \addlinespace[1ex]
+%         \multicolumn{1}{c}{\textit{Languages}}\\
+%         \cmidrule(r){1-1}
+%         English & \\
+%         \bottomrule
+%     \end{tabular}
+% \end{center}
 
 % \begin{itemize}
 %     \item Basic:
@@ -177,29 +277,78 @@ therefore these have a starting value of 0.
 %     \end{itemize}
 % \end{itemize}
 
-  
+\clearpage
 \section{Character Creation \& Improvement}
-The character's background has a set of starting skill levels,
-and on top of that players get \_\_\_ starting xp to freely spend.
+To improve a skill, or learn a new skill, players need to spend Experience.
+Note that this can only be done during character down-time.
+Experience is typically awarded by the Narrator at the end of every session (or plot arc).
 
-Players get additional xp based on the Intelligence stat. 
-Or not, it'd be nice to have character XP be the same for everyone. 
-But I do want some way to have Intellect influence how good your statting skills and / or improvement is.
+Improving a skill costs Experience equal to the \textit{current} rank in that skill.
+So, for example: if your Persuasion skill is currently rank 3, then it would cost 3 Experience to increase it to rank 4.
+
+Learning new professional skills is also possible, though this comes at a bit of a cost.
+First of all you'll need a "source" to learn from, 
+this could be, for example, a teacher (including other players) or a book.
+Once you have a source to learn from you must spend 2 Experience to gain your first rank in your new skill.
+You'll have to spend additional Experience to increase it beyond that.
+
+\subsection{Character Creation}
+Making new characters works in much the same way as improving existing ones.
+After disctributing points between your primary stats and picking a background/profession
+you can get started with developing your skills.
+
+During character creation you can spend 20 Experience on your background skills,
+and $10 + 4\times Intellect$ on personal interest skills. 
+When assigning Experience to background skills you \textit{do not} have to pay 
+the Experience cost for learning new skills that are part of your background (and they are assumed to start at rank 1),
+however, for personal interest skills you do have to "learn" any new skills as normal.
 
 
-\begin{center}
-    \noindent\begin{tabular}{@{}l l@{}}
-        & \tableheader{XP Needed}\\
-        \toprule
-        \textbf{Improve a skill} & 10 * current rank \\
-        & \textit{so getting a skill from 1 to 5 takes 100 xp}\\
-        \addlinespace[1ex]
-        \textbf{Learn a new skill} & 20 xp (to get level 1)\\
-        \addlinespace[1ex]
-        \textbf{Improve characteristic?} & maybe 50 * current rank?\\
-        \bottomrule
-    \end{tabular}
-\end{center}
+% \begin{center}
+%     \noindent\begin{tabular}{@{}l l@{}}
+%         & \tableheader{XP Needed}\\
+%         \toprule
+%         \textbf{Improve a skill} & 10 * current rank \\
+%         & \textit{so getting a skill from 1 to 5 takes 100 xp}\\
+%         \addlinespace[1ex]
+%         \textbf{Learn a new skill} & 20 xp (to get level 1)\\
+%         \addlinespace[1ex]
+%         \textbf{Improve characteristic?} & maybe 50 * current rank?\\
+%         \bottomrule
+%     \end{tabular}
+% \end{center}
+
+\chapter{Motivations}
+During Character creation come up with 2 drives, and one flaw.
+Drives can be people, something you love doing, or even a goal. 
+Just like skills drives have a rank from 1 to 5, indicating how strong they are.
+
+\noindent\textbf{Basic concept:}
+\ul{
+    \item Start with 2 drives and 1 flaw during character creation.
+    \item \textbf{Drives:}
+    \ul{
+        \item A drive can be a person, something you love doing, a goal, ...
+        \item Drives have a rank from 1 to 5, just like skills
+        \item Drives are mainly used to lessen the effects of stress: %(and for roleplaying)
+        \ul{
+            \item Acting within a drive during downtime increases stress recovery. 
+            (By rolling the drive to recover stress just like you would with Willpower)
+            \item 
+        }
+    }
+    \item 
+    \ul{
+        \item People can use motivations to lessen stress (be it recovering or reducing incoming stress)
+        \item but doing so also causes those things to lower over time
+    }
+    \item Flaws need to bne part of the motivation system, those would be a great place for keepers to use Karma points
+    \ul{
+        \item Phobias and manias could also fall under "Flaws", avoiding somewhat problematic terminology
+    }
+    \item (look at mouse guard and fate too for ideas)
+
+}
 
 
 \chapterwithsubtitle{Karma points}{(i.e. Story / Fate Points)}
@@ -242,20 +391,30 @@ When something happens that could cause distress to a character
 the Narrator may ask for a "Sanity Check" to see how they react.
 Sanity checks always use the character's Willpower, and the difficulty of the check will be set based on the severity of the cause. 
 Any Advantages or Drawbacks rolled will result in a short term effect.
-\begin{center}
-    \noindent\begin{tabular}{@{}lm{3in}@{}}
-        & \tableheader{Effects}\\
-        \toprule
-        \textbf{Success} & Gain Stress equal to the difficulty\\
-        \addlinespace[1ex]
-        \textbf{Failure} & Gain Stress equal to the difficulty plus number of failures (\textit{before} cancelling them out)\\
-        \addlinespace[1ex]
-        \textbf{Advantage} & Adrenaline rush, fearless, bonus on next san check, ...\\
-        \addlinespace[1ex]
-        \textbf{Drawback} & Scream in terror, involuntary action in combat, freeze, ...\\
-        \bottomrule
-    \end{tabular}
-\end{center}
+% \begin{center}
+%     \noindent\begin{tabular}{@{}lm{3in}@{}}
+%         & \tableheader{Effects}\\
+%         \toprule
+%         \textbf{Success} & Gain Stress equal to the difficulty\\
+%         \addlinespace[1ex]
+%         \textbf{Failure} & Gain Stress equal to the difficulty plus number of failures (\textit{before} cancelling them out)\\
+%         \addlinespace[1ex]
+%         \textbf{Advantage} & Adrenaline rush, fearless, bonus on next san check, ...\\
+%         \addlinespace[1ex]
+%         \textbf{Drawback} & Scream in terror, involuntary action in combat, freeze, ...\\
+%         \bottomrule
+%     \end{tabular}
+% \end{center}
+
+\fancytable[1.5]{lm{3in}}
+{
+    & \thead{Effects}\\
+}{
+    \textbf{Success} & Gain Stress equal to the difficulty\\
+    \textbf{Failure} & Gain Stress equal to the difficulty plus number of failures (\textit{before} cancelling them out)\\
+    \textbf{Advantage} & Adrenaline rush, fearless, bonus on next san check, ...\\
+    \textbf{Drawback} & Scream in terror, involuntary action in combat, freeze, ...\\
+}{}
 
 If your stress goes above your limit you must make an Willpower roll with 1 difficulty dice for each point you are above your limit.
 If you succeed nothing happens, though you must roll again if you gain more stress,
@@ -409,27 +568,43 @@ When being attacked, either:
 % }
 % }
 
-\begin{center}
-    \begin{threeparttable}
-      \small
-      \noindent\begin{tabular}{@{}lcccc@{}}
-          \multirow{2}{*}[-3pt]{\textbf{Action}} & \multirow{2}{*}[-0pt]{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \tableheaderspan{3}{Outcome}\\
-          \cmidrule(l){3-5}
-          & & \tablesubheader{Attacker Wins} & \tablesubheader{Defender Wins} & \tablesubheader{Tie}\\
-          \toprule
-          \textbf{Dodge}      & Dex   & Attacker Hits & No Hit\tnote{*} & No Hit\\
-          \addlinespace[1ex]
-          \textbf{Defend}     & Brawl & Attacker Hits & No Hit & No Hit\\
-          \addlinespace[1ex]
-          \textbf{Fight Back} & Brawl & Attacker Hits & Defender Hits & Attacker Hits\\
-          \bottomrule
-      \end{tabular}
-      \begin{tablenotes}
-        \footnotesize
-        \item[*] The Defender also falls prone.
-      \end{tablenotes}
-    \end{threeparttable}
-\end{center}
+% \begin{center}
+%     \begin{threeparttable}
+%       \small
+%       \noindent\begin{tabular}{@{}lcccc@{}}
+%           \multirow{2}{*}[-3pt]{\textbf{Action}} & \multirow{2}{*}[-0pt]{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \tableheaderspan{3}{Outcome}\\
+%           \cmidrule(l){3-5}
+%           & & \tablesubheader{Attacker Wins} & \tablesubheader{Defender Wins} & \tablesubheader{Tie}\\
+%           \toprule
+%           \textbf{Dodge}      & Dex   & Attacker Hits & No Hit\tnote{*} & No Hit\\
+%           \addlinespace[1ex]
+%           \textbf{Defend}     & Brawl & Attacker Hits & No Hit & No Hit\\
+%           \addlinespace[1ex]
+%           \textbf{Fight Back} & Brawl & Attacker Hits & Defender Hits & Attacker Hits\\
+%           \bottomrule
+%       \end{tabular}
+%       \begin{tablenotes}
+%         \footnotesize
+%         \item[*] The Defender also falls prone, regardless of wether they succeed or not.
+%       \end{tablenotes}
+%     \end{threeparttable}
+% \end{center}
+
+{
+\small
+    \fancytable[1.5]{lcccc}
+    {
+        \multirow{2}{*}{\thead{Action}} & \multirow{2}{*}{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \multicolumn{3}{c}{\thead{Outcome}}\\
+        \cmidrule(l){3-5}
+        & & \tsubhead{Attacker Wins} & \tsubhead{Defender Wins} & \tsubhead{Tie}\\
+    }{
+        \textbf{Dodge}      & Dex   & Attacker Hits & No Hit\tnote{*} & No Hit\\
+        \textbf{Defend}     & Brawl & Attacker Hits & No Hit & No Hit\\
+        \textbf{Fight Back} & Brawl & Attacker Hits & Defender Hits & Attacker Hits\\
+    }{
+        \item[*] The Defender also falls prone, regardless of wether they succeed or not.
+    }
+}
 
 \section{Firearms}
 
@@ -443,7 +618,7 @@ Base difficulty:
 +1 difficulty when firing at moving target, partial cover, ...
 -1 difficulty when firing at ...
 
-The combatant who's being shot at has the option to try diving away (only if they're aware they're being shot at). If they choose to do so the difficulty of the shot is increased by half the target's Dexterity (rounding *up*), however, the person diving for cover will be prone until they get up again (which takes an action).
+The combatant who's being shot at has the option to try diving away (only if they're aware they're being shot at). If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding *up*), however, the person diving for cover will be prone until they get up again (which takes an action).
 
 what about rapid fire?  
 
@@ -527,15 +702,16 @@ How to handle shotguns? No clue :p
         }
     }
     \item need more Karma uses (especially for the Keeper) and a reason to avoid hoarding them
-    \item Maybe remove athletics in favour of Dexterity (and rename dex?)
-    \item Do I \textit{really} need the 3-tally system for adapting to stress?
+    \item maybe also remove Knowledge in favour of Intellect
+    % \item get rid of the speed stat, it's not needed
+    \item Maybe let people roll for sanity with Mythos Knowledge instead of Willpower when it's appropriate
 }
 
 \clearpage
 \section{Playtesters}
 Thank you to everyone who's helped me with playtesting and providing valuable feedback!
 \ul{
-    \item 2Boots \textit{(@too\_boots\#8000)}
+    \item Gabriel Reich %2Boots \textit{(@too\_boots\#8000)}
     \item Kyle Scott \textit{(@Lord of the Kyles\#1817)}
     \item Morgan J \textit{(@Morgan J\#3848)}
     \item Wayne \textit{(@Wayne Rossi\#2400)}
