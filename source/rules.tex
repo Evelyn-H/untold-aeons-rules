@@ -1,6 +1,21 @@
 % good ideas for general content layout:
 % https://www.reddit.com/r/RPGdesign/comments/kgk19y/anything_obvious_missing/ggfi13i/
 
+% \chapter{Character creation}
+
+% \section{Characteristics}
+
+% \section{Backgrounds}
+
+% \section{Starting Skills}
+% ...
+% \subsection{Improving Skills}
+% \subsubsection{Test}
+
+% \section{Motivations}
+
+
+
 \chapter{Stats}
 \section{Primary Stats}
 
@@ -318,37 +333,37 @@ however, for personal interest skills you do have to "learn" any new skills as n
 %     \end{tabular}
 % \end{center}
 
-\chapter{Motivations}
-During Character creation come up with 2 drives, and one flaw.
-Drives can be people, something you love doing, or even a goal. 
-Just like skills drives have a rank from 1 to 5, indicating how strong they are.
+% \chapter{Motivations}
+% During Character creation come up with 2 drives, and one flaw.
+% Drives can be people, something you love doing, or even a goal. 
+% Just like skills drives have a rank from 1 to 5, indicating how strong they are.
 
-\noindent\textbf{Basic concept:}
-\ul{
-    \item Start with 2 drives and 1 flaw during character creation.
-    \item \textbf{Drives:}
-    \ul{
-        \item A drive can be a person, something you love doing, a goal, ...
-        \item Drives have a rank from 1 to 5, just like skills
-        \item Drives are mainly used to lessen the effects of stress: %(and for roleplaying)
-        \ul{
-            \item Acting within a drive during downtime increases stress recovery. 
-            (By rolling the drive to recover stress just like you would with Willpower)
-            \item 
-        }
-    }
-    \item 
-    \ul{
-        \item People can use motivations to lessen stress (be it recovering or reducing incoming stress)
-        \item but doing so also causes those things to lower over time
-    }
-    \item Flaws need to bne part of the motivation system, those would be a great place for keepers to use Karma points
-    \ul{
-        \item Phobias and manias could also fall under "Flaws", avoiding somewhat problematic terminology
-    }
-    \item (look at mouse guard and fate too for ideas)
+% \noindent\textbf{Basic concept:}
+% \ul{
+%     \item Start with 2 drives and 1 flaw during character creation.
+%     \item \textbf{Drives:}
+%     \ul{
+%         \item A drive can be a person, something you love doing, a goal, ...
+%         \item Drives have a rank from 1 to 5, just like skills
+%         \item Drives are mainly used to lessen the effects of stress: %(and for roleplaying)
+%         \ul{
+%             \item Acting within a drive during downtime increases stress recovery. 
+%             (By rolling the drive to recover stress just like you would with Willpower)
+%             \item 
+%         }
+%     }
+%     \item 
+%     \ul{
+%         \item People can use motivations to lessen stress (be it recovering or reducing incoming stress)
+%         \item but doing so also causes those things to lower over time
+%     }
+%     \item Flaws need to bne part of the motivation system, those would be a great place for keepers to use Karma points
+%     \ul{
+%         \item Phobias and manias could also fall under "Flaws", avoiding somewhat problematic terminology
+%     }
+%     \item (look at mouse guard and fate too for ideas)
 
-}
+% }
 
 
 \chapterwithsubtitle{Karma points}{(i.e. Story / Fate Points)}
@@ -608,21 +623,24 @@ When being attacked, either:
 
 \section{Firearms}
 
-Ranged Attack:  
-Base difficulty: 
-    - Point blank: 1
-    - less than weapon range: 2
-    - less than 2x weapon range: 3
-    - etc.
+Ranged Attack difficulty:
+\ul{
+    \item Point blank: 1
+    \item less than weapon range: 2
+    \item less than 2x weapon range: 3
+    \item etc...
+    \item +1 difficulty when firing at moving target, partial cover, ...
+    \item -1 difficulty when firing at ...
+}  
 
-+1 difficulty when firing at moving target, partial cover, ...
--1 difficulty when firing at ...
 
-The combatant who's being shot at has the option to try diving away (only if they're aware they're being shot at). If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding *up*), however, the person diving for cover will be prone until they get up again (which takes an action).
 
-what about rapid fire?  
+The combatant who's being shot at has the option to try diving away 
+(only if they're aware they're being shot at). 
+If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding *up*), 
+however, the person diving for cover will be prone until they get up again (which takes an action).
 
-Weapon Trait: \textbf{Rapid Fire  <N>}
+Weapon Trait: \textbf{Rapid Fire  <N>} \newline
 When you use this weapon you may choose to rapidly fire many shots instead of just one. If you do this you take 1 penalty dice to your Firearms skill. Then, if your attack succeeds, you manage to hit a number of shots up to your MoS (Margin of Success), but never more than \textbf{N}. Each shot deals damage as usual (base damage + \#S)
 If you roll advantages you can make a single hit into a critical hit for each advantage you rolled.
 
@@ -656,11 +674,11 @@ Drawback:
 
 \section{Damage Calculation}
 
-Damage Dealt = Weapon Base Damage + Successes Rolled (*before* cancelling out)
+Damage Dealt = Weapon Base Damage + Successes Rolled (\textit{before} cancelling out)
 
 Damage Taken = Damage Dealt - max(0, Toughness - Piercing) 
 
-If an attack succeeds *with Advantage* it's a critical hit, dealing double base damage (before reducing it by the Toughness)
+If an attack succeeds \textit{with Advantage} it's a critical hit, dealing double base damage (before reducing it by the Toughness)
 (Idea: what about double non-base damage? makes more sense sort of, but need to check the maths)
 
 Melee weapons will often deal extra damage based on your Toughness, this is denoted by adding a "+" to the damage number, so a weapons dealing "1+" damage will have a base damage of 1 + your Toughness.
@@ -712,9 +730,9 @@ How to handle shotguns? No clue :p
 Thank you to everyone who's helped me with playtesting and providing valuable feedback!
 \ul{
     \item Gabriel Reich %2Boots \textit{(@too\_boots\#8000)}
-    \item Kyle Scott \textit{(@Lord of the Kyles\#1817)}
-    \item Morgan J \textit{(@Morgan J\#3848)}
     \item Wayne \textit{(@Wayne Rossi\#2400)}
+    % \item Kyle Scott \textit{(@Lord of the Kyles\#1817)}
+    % \item Morgan J \textit{(@Morgan J\#3848)}
     \item ... and others!
 }
 
