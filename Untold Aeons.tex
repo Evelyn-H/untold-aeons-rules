@@ -46,15 +46,26 @@
 }
 \usepackage{memhfixc}   % some memoir - hyperref fix
 
-% \usepackage[toc]{multitoc}
-% \renewcommand*{\multicolumntoc}{2}
-% \setlength{\columnseprule}{0.5pt}
-% \setlength{\columnsep}{2\baselineskip}
+\usepackage[toc]{multitoc}
+\renewcommand*{\multicolumntoc}{2}
+\setlength{\columnseprule}{0.5pt}
+\setlength{\columnsep}{2\baselineskip}
 
 \usepackage{multicol}
 
+\usepackage[
+    % disable,
+    backgroundcolor=lightgray,
+    linecolor=gray,
+    bordercolor=lightgray,
+]{todonotes}
+\let\oldtodo\todo
+\renewcommand{\todo}[1]{\oldtodo{\textbf{Todo:} \textit{#1}}}
+\newcommand{\todoi}[1]{\oldtodo[inline]{\textbf{Todo:} \textit{#1}}}
+
 \include{source/layout}
 \include{source/commands}
+
 
 %%% THE DOCUMENT
 %%%-------------
@@ -97,6 +108,7 @@
             \let\newcommand\renewcommand
             \makeatletter
             % \input{mem9.clo}
+            % \input{mem10.clo}
             \makeatother
             \let\newcommand\savednewcommand
         }
