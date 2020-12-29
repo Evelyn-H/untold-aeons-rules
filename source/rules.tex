@@ -91,8 +91,11 @@ After deciding on your Characteristics you should calculate your derived attribu
 \begin{description}
     \item[Stress Limit $(10 + Willpower)$] 
     Characters with a higher Stress limit are able to withstand more stress before succumbing to it.
+    
     \item[Wound Limit $(10 + Toughness)$] 
     This represents how much physical damage you can take before you become incapacitated.
+
+    % \item[Soak $(Toughness / 2, rounded\ down)$]
 \end{description}
 
 % \fancytable{lll}
@@ -107,13 +110,61 @@ After deciding on your Characteristics you should calculate your derived attribu
 % In a full-on sprint characters can go up to 5 times their Move Speed per round, while a sustained run is about 2-3 times their speed per round
 
 \section{Backgrounds}
-\todoi{Talk about backgrounds and maybe list some example ones. (With a reference to more later in the book?)}
+Your character's background represents how you make a living and what your expertise is.
+In more concrete terms, your background determines your starting professional skills you have access to,
+but doesn't have much direct influence on the game beyond that. 
+
+% \subsection{List of Backgrounds}
+
+\newcommand{\makebackground}[3]{
+    \noindent
+    \begin{minipage}{\linewidth}
+        % \raggedright
+        {\raggedright\normalfont\large\bfseries\scshape #1}\\
+        % #2\\#3
+        #3
+        % \textit{Standard:} #2\\
+        % \textit{Professional:} #3
+    \end{minipage}
+    \par
+    % \vspace{\parsep}
+}
+\vspace{\parskip}
+\begin{multicols}{2}
+    \makebackground{Artist}{}
+    {Art/Craft (Any two), History or Science (Biology), Language (Any)}
+
+    \makebackground{Author}{}
+    {History, Science (Literature), Science (Any) or Occult, Language (Any)}
+
+    \makebackground{Criminal}{}
+    {Brawl, Firearms, Locksmithing, Sleight of Hand}
+
+    \makebackground{Librarian}{}
+    {Accounting, Language (Any), Any 2 skills as personal specialties}
+
+    \makebackground{Occultist}{}
+    {Science (Anthropology), Art/Craft (Photography), Occult, Language (Any)}
+   
+    \makebackground{Private Investigator}{}
+    {Firearms, Art/Craft (Photography), Locksmithing, Law}
+
+    \makebackground{Professsor / Scientist}{}
+    {Language (Any), Any 3 skills as academic specialties}
+
+    \makebackground{Soldier}{}
+    {Navigation, Mechanical Repair, Language (Any), Any skill as specialty}
+
+\end{multicols}
+
+
+\todoi{more fluff and more example backgrounds (With a reference to more later in the book?)}
 
 \section{Starting Skills}
-After disctributing points between your primary stats and picking a background
+After distributing points between your primary characteristics and picking a background
 you can get started with developing your skills. This is done by spending Experience to improve your skills. 
-During character creation you can spend 20 Experience on your background skills,
-and $10 + 4 \times Intellect$ on personal interest skills. 
+First you can spend 20 Experience on your background skills and any standard skills.
+Afterwards you can spend another $10 + 4 \times Intellect$ on any skill you want as personal interests. 
 
 When assigning Experience to background skills you \textit{do not} have to pay 
 the Experience cost for learning new professional skills that are part of your background (and they are assumed to start at rank 1),
@@ -128,8 +179,7 @@ Experience is typically awarded by the Narrator at the end of every session (or 
 Improving a skill costs Experience equal to the \textit{current} rank in that skill.
 For example: if your Persuasion skill is currently rank 3, then it would cost 3 Experience to increase it to rank 4.
 
-Learning new professional skills is also possible,
-as long as you have a "source" to learn from.
+Learning new professional skills is also possible, as long as you have a "source" to learn from.
 This could be a teacher (including other players), a book, or any other source of knowledge.
 Once you have a source to learn from you must spend 2 Experience to gain your first rank in your new skill.
 You'll have to spend additional Experience to increase it beyond that.
