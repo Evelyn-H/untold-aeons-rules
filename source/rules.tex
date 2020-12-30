@@ -205,7 +205,13 @@ You'll have to spend additional Experience to increase it beyond that.
 
 
 \chapter{Skills}
-\todoi{Describe the difference between Standard and Professional skills here}
+There are two different kinds of skills: standard and professional skills.
+Standard skills are all the skills that are on the character sheet by default and start at rank one.
+These are skills that everyone knows at least to some extent.
+
+Professional skills on the other hand are skills that only some people know, 
+and they aren't listed on the character sheet by default. 
+They're usually more specialised and unique skills.
 
 \section{Standard Skills}
 Standard skills are skills that every character possesses (at least at a basic level),
@@ -215,7 +221,7 @@ therefore these have a starting rank of 0.
 
 \fancytable[1.5]{m{1in}m{1in}m{1in}}
 {
-    \thead{General} & \thead{Social} & \thead{Combat}\\
+    \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
 }{
     Driving & Charm & Brawl\\
     First Aid & Deception & Firearms\\
@@ -227,7 +233,50 @@ therefore these have a starting rank of 0.
 }{}
 
 \section{Professional Skills}
-\todoi{Some fluff and a list of skills here}
+Professional skills can be just about anything you want, 
+but here's a list of some more common ones.
+Some skills, like "Science" or "Language", require a specific specialisation to be listed,
+which is done in parentheses after the skill.
+(These are also marked in the list by having "\textit{(Specific)}" after the skill.)
+\textit{E.g. "Science (Biology)"}
+
+\fancytable[1.5]{lll}
+{
+    % \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
+}{
+    Accounting                      & Language \textit{(Specific)}  & Occult \\
+    Appraise                        & Law                           & Operating \\
+    Art/Craft \textit{(Specific)}   & Locksmithing                  & Piloting \\
+    Disguise                        & Mechanics                     & Psychoanalysis \\
+    Electronics                     & Medicine                      & Science \textit{(Specific)} \\
+    History                         & Navigation                    & Sleight of Hand\\
+}{}
+
+% \begin{multicols}{3}
+%     \begin{itemize}[
+%         label={},
+%         leftmargin=0pt,
+%     ]
+%         \item Accounting
+%         \item Appraise
+%         \item Art/Craft (Specific)
+%         \item Disguise
+%         \item Electronics
+%         \item History
+%         \item Language (Specific)
+%         \item Law
+%         \item Locksmithing
+%         \item Mechanics
+%         \item Medicine
+%         \item Navigation
+%         \item Occult
+%         \item Operating
+%         \item Piloting
+%         \item Psychoanalysis
+%         \item Sleight of Hand
+%     \end{itemize}
+% \end{multicols}
+
 
 % \chapter{Motivations}
 % During Character creation come up with 2 drives, and one flaw.
