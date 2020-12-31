@@ -1,6 +1,11 @@
 % good ideas for general content layout:
 % https://www.reddit.com/r/RPGdesign/comments/kgk19y/anything_obvious_missing/ggfi13i/
 
+%%% 
+
+
+
+
 \chapter{Rolling Dice}
 
 A standard dice roll in Untold Aeons has two "pools" of dice: the skill pool and the difficulty pool. 
@@ -142,7 +147,7 @@ but doesn't have much direct influence on the game beyond that.
     {History, Science (Literature), Science (Any) or Occult, Language (Any)}
 
     \makebackground{Criminal}{}
-    {Locksmithing, Sleight of Hand, Appraise, Electrical Repair or Mechanical Repair}
+    {Locksmithing, Sleight of Hand, Appraise, Electronics or Mechanics}
     
     \makebackground{Librarian}{}
     {Accounting, Language (Any), Any 2 skills as personal specialties}
@@ -163,7 +168,7 @@ but doesn't have much direct influence on the game beyond that.
     {Language (Any), Any 3 skills as academic specialties}
 
     \makebackground{Soldier}{}
-    {Navigation, Mechanical Repair, Language (Any), Any skill as specialty}
+    {Navigation, Mechanics, Language (Any), Any skill as specialty}
 
 \end{multicols}
 
@@ -244,13 +249,15 @@ which is done in parentheses after the skill.
 {
     % \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
 }{
-    Accounting                      & Language \textit{(Specific)}  & Occult \\
-    Appraise                        & Law                           & Operating \\
-    Art/Craft \textit{(Specific)}   & Locksmithing                  & Piloting \\
-    Disguise                        & Mechanics                     & Psychoanalysis \\
-    Electronics                     & Medicine                      & Science \textit{(Specific)} \\
-    History                         & Navigation                    & Sleight of Hand\\
+    Accounting                      & Language \textit{(Specific)}  & Operating                     \\
+    Appraise                        & Law                           & Piloting                      \\
+    Animal Handling                 & Locksmithing                  & Psychoanalysis                \\
+    Art/Craft \textit{(Specific)}   & Mechanics                     & Science \textit{(Specific)}   \\
+    Disguise                        & Medicine                      & Sleight of Hand               \\
+    Electronics                     & Navigation                    &                               \\
+    History                         & Occult                        &                               \\
 }{}
+
 
 % \begin{multicols}{3}
 %     \begin{itemize}[
@@ -457,15 +464,28 @@ If you succeed nothing happens, though you must roll again if you take more dama
 If your total damage taken goes above \textit{twice} your limit you must make a Toughness save or die. (same mechanic as above)  
 You must also make another save every time you take additional damage (including the damage from being Severely Injured).
 
-The Narrator is also always allowed to ask for stress rolls when significant injuries are suffered. This is done at the discretion of the Narrator
+The Narrator is also always allowed to ask for stress rolls when significant injuries are suffered. 
+This is done at the discretion of the Narrator.
 
 
 \subsection{Severely Injured}
-You have likely suffered a permanent injury and are currently incapacitated (be it passed out or simply unable to fight / act)
+You have suffered a severe injury and are currently incapacitated (be it passed out or simply unable to fight / act)
 Additionally, you take one damage every minute (or round?) until your receive medical care
 
 
-\section{Natural healing}
+\section{Healing}
+
+\subsection{Medical Care}
+A character can receive medical care for wounds either from a First Aid or Medicine skill.
+First Aid can only be attempted shorty after the injury was suffered, and can only be attempted once.
+The difficulty of the Fist Aid check is based on the severity of the character's wounds 
+and how much time has passed since the injury.
+A successful First Aid check heals a number of wounds equal to \textit{half} the number of successes rolled (rounded up, and \textit{before} cancellation).
+
+The Medicine skill works very similarly except it takes at least 1 hour to execute,
+and it heals for the full number of successes rolled instead of just half.
+
+\subsection{Natural Healing}
 Once a day you make an unopposed Toughness check. 
 If your injuries are below your limit you heal one wound for every success. 
 If they are above your limit you heal a number of wounds equal to half the number of successes (rounded down).
@@ -487,7 +507,6 @@ The side initiating the fight also goes first. So, the turn order is as follows:
 
 
 \section{Attack Roll}
-
 When being attacked, either:
     - **Dodge**: Roll Dex to avoid, *but* fall prone afterwards
         - Ties are in favour of the defender
@@ -522,7 +541,7 @@ Critical hits double the amount of damage you deal from your successes
 They can only be triggered by spending a Story point. 
 
 
-\section{Firearms}
+\subsection{Firearms}
 
 Ranged Attack difficulty:
 \ul{
@@ -627,6 +646,7 @@ How to handle shotguns? No clue :p
     \item Idea: what about just getting rid of Backgrounds entirely? 
     instead players could just pick 4(?) professional skills + spend xp on anything.
     Simple. Quick. Free!
+    \item HYPERLINK ALL THE THINGS!
 }
 
 \clearpage
