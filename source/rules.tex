@@ -76,7 +76,7 @@ with a minimum of 1 and maximum of 5 for each characteristic.
     \item[Intellect]
     Your character's intelligence, education, and ability to learn and process information.
     Characters with a higher Intellect will have higher initial skills. 
-    Intellect also determines your character's general knowledge and can be used as a skill.
+    Intellect can also be used as a "General Knowledge" skill.
 \end{description}
 
 % \fancytable{lll}
@@ -94,7 +94,7 @@ with a minimum of 1 and maximum of 5 for each characteristic.
 After deciding on your Characteristics you should calculate your derived attributes:
 
 \begin{description}
-    % \item[Soak $(Toughness / 2, rounded\ down)$]
+    % \item[Soak $(Toughness / 2, rounded\ up)$]
     % A higher soak means you'll take less damage from incoming attacks. 
 
     \item[Wound Limit $(10 + Toughness)$] 
@@ -436,7 +436,7 @@ Being hardened also affects and changes the personality of the character, becomi
 \section{Recovering Stress}
 Once a day you make an unopposed Willpower check. 
 If your stress is below your limit you lose 1 stress for every success. 
-If it is above your limit you lose stress equal to half the number of successes (rounded down).
+If it is above your limit you lose stress equal to half the number of successes (rounded up).
 You always recover at least 1 Stress.
 
 \section*{Goals for sanity mechanics}
@@ -489,7 +489,7 @@ and it heals for the full number of successes rolled instead of just half.
 \subsection{Natural Healing}
 Once a day you make an unopposed Toughness check. 
 If your injuries are below your limit you heal one wound for every success. 
-If they are above your limit you heal a number of wounds equal to half the number of successes (rounded down).
+If they are above your limit you heal a number of wounds equal to half the number of successes (rounded up).
 You always heal at least 1 Wound.
 
 \section{Initiative}
@@ -599,15 +599,13 @@ Damage Dealt = Weapon Base Damage + Successes Rolled (\textit{before} cancelling
 
 Damage Taken = Damage Dealt - max(0, Toughness - Piercing) 
 
-If an attack succeeds \textit{with Advantage} it's a critical hit, dealing double base damage (before reducing it by the Toughness)
-(Idea: what about double non-base damage? makes more sense sort of, but need to check the maths)
+% If an attack succeeds \textit{with Advantage} it's a critical hit, dealing double base damage (before reducing it by the Toughness)
+% (Idea: what about double non-base damage? makes more sense sort of, but need to check the maths)
 
 Melee weapons will often deal extra damage based on your Toughness, this is denoted by adding a "+" to the damage number, so a weapons dealing "1+" damage will have a base damage of 1 + your Toughness.
 
 Unarmed attacks have a base damage of "0+", i.e. your Toughness without any bonuses
 
-
-How to handle shotguns? No clue :p
 
 
 \chapter{Open Questions \& Feedback}
@@ -649,6 +647,7 @@ How to handle shotguns? No clue :p
     Simple. Quick. Free!
     \item HYPERLINK ALL THE THINGS!
     \item Rename Science to Knowledge? it's more general and just better I think
+    \item How to handle shotguns? No clue :p
 }
 
 \clearpage
