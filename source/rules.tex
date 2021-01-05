@@ -507,58 +507,86 @@ The side initiating the fight also goes first. So, the turn order is as follows:
 \end{enumerate}
 
 
-\section{Attack Roll}
-When being attacked, either:
-    - **Dodge**: Roll Dex to avoid, *but* fall prone afterwards
-        - Ties are in favour of the defender
-        - Defender takes no damage if they win
-    - **Defend**: Roll Brawl to defend yourself
-        - Ties are in favour of the defender
-        - Defender takes no damage if they win
-    - **Fight Back**: Roll Brawl to fight back  
-        - Ties are in favour of the attacker
-        - Defender takes no damage if they win *and* land a hit of their own
-    - If both combatants get 0 successes nothing happens 
+\section{Attacking \& Defending}
+
+\subsection{Melee Fights}
+Melee attacks are always resolved as opposed checks between two combatants, 
+usually using the Brawl skill. 
+The attacker always always uses their Brawl skill, 
+and the defender has a choice between a few options: Defend, Fight back, or Dodge.
+
+Defending and fighting back both use the Brawl skill, while Dodge uses the Agility characteristic instead.
+The details of how each choice affect the outcome of a roll are summarised in this table:
+
+% When being attacked, either:
+%     - **Dodge**: Roll Dex to avoid, *but* fall prone afterwards
+%         - Ties are in favour of the defender
+%         - Defender takes no damage if they win
+%     - **Defend**: Roll Brawl to defend yourself
+%         - Ties are in favour of the defender
+%         - Defender takes no damage if they win
+%     - **Fight Back**: Roll Brawl to fight back  
+%         - Ties are in favour of the attacker
+%         - Defender takes no damage if they win *and* land a hit of their own
+%     - If both combatants get 0 successes nothing happens 
 
 {
     \small
     \fancytable[1.5]{lcccc}
     {
-        \multirow{2}{*}{\thead{Action}} & \multirow{2}{*}{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \multicolumn{3}{c}{\thead{Outcome}}\\
+        \multirow{2}{*}[-4px]{\thead{Action}} & \multirow{2}{*}[-4px]{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \multicolumn{3}{c}{\thead{Outcome}}\\
         \cmidrule(l){3-5}
-        & & \tsubhead{Attacker Wins} & \tsubhead{Defender Wins} & \tsubhead{Tie}\\
+                            & & \tsubhead{Attacker Wins} & \tsubhead{Defender Wins} & \tsubhead{Tie}\\
     }{
-        \textbf{Dodge}      & Dex   & Attacker Hits & No Hit\tnote{*} & No Hit\\
-        \textbf{Defend}     & Brawl & Attacker Hits & No Hit & No Hit\\
-        \textbf{Fight Back} & Brawl & Attacker Hits & Defender Hits & Attacker Hits\\
+        \textbf{Dodge}      & Agility   & Attacker Hits & No Hit\tnote{*} & No Hit\\
+        \textbf{Defend}     & Brawl     & Attacker Hits & No Hit & No Hit\\
+        \textbf{Fight Back} & Brawl     & Attacker Hits & Defender Hits & Attacker Hits\\
     }{
-        \item[*] The Defender also falls prone, regardless of wether they succeed or not.
+        \item[*] The Defender also falls prone, regardless of whether they succeed or not.
     }
 }
+
+\subsection{Damage}
+The damage dealt by a successful hit is equal to the base damage of your weapon, 
+plus the number of successes rolled (\textit{before} cancellation). 
+Melee weapons will often deal extra damage based on your Toughness, 
+this is denoted by adding a "+" to the damage number.
+The additional damage is equal to \textit{half} your toughness, rounded up.
+so a weapon dealing "3+" damage will have a base damage of $3+\lceil\frac{Tougness}{2}\rceil$.
+
+Unarmed attacks always have a base damage of "0+", i.e. your Toughness without any bonuses
+
+% Damage Dealt = Weapon Base Damage + Successes Rolled (\textit{before} cancelling out)
+% Damage Taken = Damage Dealt - max(0, Toughness - Piercing) 
+
+% If an attack succeeds \textit{with Advantage} it's a critical hit, dealing double base damage (before reducing it by the Toughness)
+% (Idea: what about double non-base damage? makes more sense sort of, but need to check the maths)
 
 \subsection{Critical Hits} \label{critical hit}
 Critical hits double the amount of damage you deal from your successes 
 (but not the base weapon damage).
-They can only be triggered by spending a Story point. 
+They can only be triggered by spending a Story point after landing the hit. 
 
 
 \subsection{Firearms}
+Ranged attacks have a difficulty set based on the circumstances of the shot.
 
-Ranged Attack difficulty:
+\fancytable{ccccc}
+{
+    & \thead{$Point\ Blank$} & \thead{$\leq Range$} & \thead{$\leq 2*Range$} & \thead{$\geq 2*Range$}\\
+}{
+    \textbf{Difficulty} & 1 & 2 & 3 & 4\\
+}{}
+
+\subsubsection{Difficulty Modifiers}
 \ul{
-    \item Point blank: 1
-    \item less than weapon range: 2
-    \item less than 2x weapon range: 3
-    \item etc...
+
     \item +1 difficulty when firing at moving target, partial cover, ...
     \item -1 difficulty when firing at ...
-}  
+}
 
-
-
-The combatant who's being shot at has the option to try diving away 
-(only if they're aware they're being shot at). 
-If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding *up*), 
+The combatant who's being shot at is aware they're being shot at they have the option to try diving away.
+If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding \textit{up}), 
 however, the person diving for cover will be prone until they get up again (which takes an action).
 
 Weapon Trait: \textbf{Rapid Fire  <N>} \newline
@@ -567,7 +595,7 @@ If you roll advantages you can make a single hit into a critical hit for each ad
 
 
 
-\section{Resolving Advantages / Drawbacks}
+\subsection{Resolving Advantages \& Drawbacks}
 
 (See Genesys p.104 for ideas)
 
@@ -591,20 +619,6 @@ Drawback:
   - 3:
       - ?
   
-
-
-\section{Damage Calculation}
-
-Damage Dealt = Weapon Base Damage + Successes Rolled (\textit{before} cancelling out)
-
-Damage Taken = Damage Dealt - max(0, Toughness - Piercing) 
-
-% If an attack succeeds \textit{with Advantage} it's a critical hit, dealing double base damage (before reducing it by the Toughness)
-% (Idea: what about double non-base damage? makes more sense sort of, but need to check the maths)
-
-Melee weapons will often deal extra damage based on your Toughness, this is denoted by adding a "+" to the damage number, so a weapons dealing "1+" damage will have a base damage of 1 + your Toughness.
-
-Unarmed attacks have a base damage of "0+", i.e. your Toughness without any bonuses
 
 
 
