@@ -552,9 +552,9 @@ plus the number of successes rolled (\textit{before} cancellation).
 Melee weapons will often deal extra damage based on your Toughness, 
 this is denoted by adding a "+" to the damage number.
 The additional damage is equal to \textit{half} your toughness, rounded up.
-so a weapon dealing "3+" damage will have a base damage of $3+\lceil\frac{Tougness}{2}\rceil$.
+So for someone with a Toughness of 3, a weapon dealing "2+" damage will have a total base damage of 4.
 
-Unarmed attacks always have a base damage of "0+", i.e. your Toughness without any bonuses
+Unarmed attacks always have a base damage of "0+", i.e. half your Toughness without any other bonuses.
 
 % Damage Dealt = Weapon Base Damage + Successes Rolled (\textit{before} cancelling out)
 % Damage Taken = Damage Dealt - max(0, Toughness - Piercing) 
@@ -570,10 +570,15 @@ They can only be triggered by spending a Story point after landing the hit.
 
 \subsection{Firearms}
 Ranged attacks have a difficulty set based on the circumstances of the shot.
+The target also can \textit{not} defend or fight back like they could in a melee fight,
+They can still dodge however if they're aware they're being shot at. 
+If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding \textit{up}).
+However, the person diving for cover will be prone until they get up again (which takes an action).
 
+\subsubsection{Base Difficulty}
 \fancytable{ccccc}
 {
-    & \thead{$Point\ Blank$} & \thead{$\leq Range$} & \thead{$\leq 2*Range$} & \thead{$\geq 2*Range$}\\
+    & \thead{$Point\ Blank$} & \thead{$\leq Range$} & \thead{$\leq 2\times Range$} & \thead{$\geq 2\times Range$}\\
 }{
     \textbf{Difficulty} & 1 & 2 & 3 & 4\\
 }{}
@@ -585,11 +590,8 @@ Ranged attacks have a difficulty set based on the circumstances of the shot.
     \item -1 difficulty when firing at ...
 }
 
-The combatant who's being shot at is aware they're being shot at they have the option to try diving away.
-If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding \textit{up}), 
-however, the person diving for cover will be prone until they get up again (which takes an action).
-
-Weapon Trait: \textbf{Rapid Fire  <N>} \newline
+\subsection{Weapon Traits}
+\textbf{Rapid Fire N} \newline
 When you use this weapon you may choose to rapidly fire many shots instead of just one. If you do this you take 1 penalty dice to your Firearms skill. Then, if your attack succeeds, you manage to hit a number of shots up to your MoS (Margin of Success), but never more than \textbf{N}. Each shot deals damage as usual (base damage + \#S)
 If you roll advantages you can make a single hit into a critical hit for each advantage you rolled.
 
