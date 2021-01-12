@@ -1,10 +1,12 @@
 % good ideas for general content layout:
 % https://www.reddit.com/r/RPGdesign/comments/kgk19y/anything_obvious_missing/ggfi13i/
 
-%%% 
 
+\newcommand{\Agility}{\hyperref[characteristics]{Agility}}
 
-
+% \makeatletter
+%     \@ifdefinable{\Agility/}{\def\Agility/{\hyperref[characteristics]{Agility}}}
+% \makeatother
 
 \chapter{Rolling Dice}
 
@@ -44,7 +46,7 @@ Similarly, situational penalties add extra dice to the "difficulty pool".
 
 \chapter{Character creation}
 
-\section{Characteristics}
+\section{Characteristics} \label{characteristics}
 
 % \begin{itemize}
 %     \item Dexterity  -> move speed, dodge in combat, diving for cover, ...
@@ -515,7 +517,7 @@ usually using the Brawl skill.
 The attacker always always uses their Brawl skill, 
 and the defender has a choice between a few options: Defend, Fight back, or Dodge.
 
-Defending and fighting back both use the Brawl skill, while Dodge uses the Agility characteristic instead.
+Defending and fighting back both use the Brawl skill, while Dodge uses the \Agility{} characteristic instead.
 The details of how each choice affect the outcome of a roll are summarised in this table:
 
 % When being attacked, either:
@@ -538,7 +540,7 @@ The details of how each choice affect the outcome of a roll are summarised in th
         \cmidrule(l){3-5}
                             & & \tsubhead{Attacker Wins} & \tsubhead{Defender Wins} & \tsubhead{Tie}\\
     }{
-        \textbf{Dodge}      & Agility   & Attacker Hits & No Hit\tnote{*} & No Hit\\
+        \textbf{Dodge}      & Agility   & Attacker Hits\tnote{*} & No Hit\tnote{*} & No Hit\tnote{*}\\
         \textbf{Defend}     & Brawl     & Attacker Hits & No Hit & No Hit\\
         \textbf{Fight Back} & Brawl     & Attacker Hits & Defender Hits & Attacker Hits\\
     }{
@@ -546,15 +548,19 @@ The details of how each choice affect the outcome of a roll are summarised in th
     }
 }
 
+\subsubsection{Bonuses \& Penalties}
+You get a +1 bonus to any melee attack roll for every other opponent that's currently engaged with your target.
+
 \subsection{Damage}
 The damage dealt by a successful hit is equal to the base damage of your weapon, 
 plus the number of successes rolled (\textit{before} cancellation). 
-Melee weapons will often deal extra damage based on your Toughness, 
-this is denoted by adding a "+" to the damage number.
+Instead of having a fixed base damage like firearms, melee weapons will often deal extra damage based on your Toughness.
+This is denoted by a "+" after the damage number.
 The additional damage is equal to \textit{half} your toughness, rounded up.
 So for someone with a Toughness of 3, a weapon dealing "2+" damage will have a total base damage of 4.
 
-Unarmed attacks always have a base damage of "0+", i.e. half your Toughness without any other bonuses.
+Unarmed attacks always have a base damage of "0+", 
+so their base damage is entirely determined by your Toughness.
 
 % Damage Dealt = Weapon Base Damage + Successes Rolled (\textit{before} cancelling out)
 % Damage Taken = Damage Dealt - max(0, Toughness - Piercing) 
@@ -564,8 +570,8 @@ Unarmed attacks always have a base damage of "0+", i.e. half your Toughness with
 
 \subsection{Critical Hits} \label{critical hit}
 Critical hits double the amount of damage you deal from your successes 
-(but not the base weapon damage).
-They can only be triggered by spending a Story point after landing the hit. 
+(but not the weapon base damage).
+They can only be triggered by spending a Story point after successfully landing the hit. 
 
 
 \subsection{Firearms}
@@ -586,14 +592,21 @@ However, the person diving for cover will be prone until they get up again (whic
 \subsubsection{Difficulty Modifiers}
 \ul{
 
-    \item +1 difficulty when firing at moving target, partial cover, ...
-    \item -1 difficulty when firing at ...
+    \item +1 difficulty when firing at moving target, small target, partial cover, ...
+    \item -1 difficulty when firing at a large target, ...
 }
+You also get a +2 bonus to your skill if you spend a round aiming and preparing the shot.
 
 \subsection{Weapon Traits}
 {
     \setlength{\parskip}{0pt}  % remove this once I add text before it
     \begin{description}
+        % \item[Accurate <N>]
+        % This weapon's accuracy makes it easier to use, adding N bonus dice to the relevant combat skill.
+
+        % \item[Inccurate <N>]
+        % Inaccurate weapons add N penalty dice to the difficulty of the relevant combat skill.
+
         \item[Rapid Fire <N>] 
         When you use this weapon you may choose to rapidly fire many shots instead of just one.
         If you do this you take 1 penalty dice to your Firearms skill. 
@@ -672,6 +685,27 @@ Drawback:
     \item HYPERLINK ALL THE THINGS!
     \item Rename Science to Knowledge? it's more general and just better I think
     \item How to handle shotguns? No clue :p
+    \item Maybe get rid of item traits as a system:
+    \ul{
+        \item work rapid-fire into the weapon ammo stat or something (like coc)
+        \item still have effects for weapons, but don't strictly codify them
+    }
+    \item Look at Darkest Dungeon for Stress ideas
+    \item Also have a look at savage worlds with their "edges and hindrances"
+    \item Combat Idea:
+    \ul{
+        \item Combine Dodge and Disengage into one "action"
+        \item Intead of always falling prone, just do it on disadvanatge?
+        \item This leaves Defend and fight backa ns the two main combat options
+        \item Or maybe totally get rid of the defend/fight back distinction,
+              but just have regular "passive" defense, 
+              with the fight back effect as a result of rolling advantages on your defense check
+        \item Look at the DG combat system too!
+        \item Idea: only options are Dodge and passive defense (opposed Brawl).
+              Passive defense doesn't do anything special, except you deal your base damage against your opponent if you get an advantage on the opposed roll
+              Dodging (or disengaging) uses Agility, and means you're scrambling for cover or distance.
+              It's still an opposed roll against your opponent's Brawl, but if you lose you will fall prone. 
+    }
 }
 
 \clearpage
@@ -701,3 +735,17 @@ Thank you to everyone who's helped me with playtesting and providing valuable fe
     % and reset the indent back to what it was
     \addtocontents{toc}{\setlength{\cftchapterindent}{0pt}}
 }
+
+
+% @Investigator @Keeper of Arcane Lore 
+% **Title of the game:** Edge of Darkness -- **Untold Aeons Playtest**
+% **Date/Time:** Saturday Jan 16th, 1pm CST / 7pm UK time
+% **Number of  slots left:** *2 slots left*
+% **Type of Game:** one-shot playtest for my own system, set in the summer of 1923 in Arkham
+% **Description:** Rupert Merriweather, and old acquaintance of you, is dying and you have been called to his hospital bedside. He said he has something very urgent to share with you.
+% **Platform:** Discord
+% **Language:** English
+% **Other Notes:** This is a playtest for my own CoC-esque system, so if you just want CoC 7e this *is not* for you. Though anyone is welcome to join, regardless of any prior experience. All I ask is that you take a moment to give feedback about the system afterwards ^^
+% The system itself is meant to be a simple, narrative focused (and somewhat pulpy) horror game (inspired by CoC, Genesys, Trail of Cthulhu, ...)
+% **Trigger Warnings:** 
+% **Players that joined the game:** @Wayne Rossi#2400 @Meraxes II#8273 @Strelok#7317 @Gorki#2613
