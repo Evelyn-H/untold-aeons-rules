@@ -483,8 +483,8 @@ This is done at the discretion of the Narrator.
 
 
 \subsection{Severely Injured}
-You have suffered a severe injury and are currently incapacitated (be it passed out or simply unable to fight / act)
-Additionally, you take one damage every minute (or round?) until your receive medical care
+You have suffered a severe injury and are currently incapacitated (be it passed out or simply unable to fight / act).
+Additionally, you take one damage every minute (or round?) until your receive medical care.
 
 
 \section{Healing}
@@ -505,31 +505,51 @@ If your injuries are below your limit you heal one wound for every success.
 If they are above your limit you heal a number of wounds equal to half the number of successes (rounded up).
 You always heal at least 1 Wound.
 
-\section{Initiative}
-There are 2 possible types of turns: Fast and Slow turns.  
-In a Slow turn you can take and action \textit{and} move, in a slow turn you can either take an action \textit{or} move.  
-At the start of a round everyone involved in the fight chooses if they want to take a Fast or Slow turn.
-If multiple combatants go at the same time they can choose the order in which they act.
-The side initiating the fight also goes first. So, the turn order is as follows: 
+\section{Combat Round}
+Combat is handled in Rounds, where each Round is about 10 seconds long.
+During one round every combatant gets a single turn during which they can act.
+There are two main categories of things a combatant can do during their turn: Maneuvers and Actions.
+Of course they can also freely do minor things like speaking, dropping something, looking around, and so on. 
 
-\begin{enumerate}
-    \item Initiating side (\textit{Fast})
-    \item Defending side (\textit{Fast})
-    \item Initiating side (\textit{Slow})
-    \item Defending side (\textit{Slow})
-\end{enumerate}
+\subsection{Maneuvers}
+A maneuver is anything that would take some time and effort to perform, but is easy enough to not need a skill check.
+This includes (but isn't limited to): moving, interacting with your environment, diving for cover or standing up, aiming a gun, ...
+\todoi{Define these a little more concretely}
+
+\subsection{Actions}
+Actions are the primary activity a combatant performs during their turn. 
+There are two main types of actions: attacks and skill checks.
+An attack can be anything from shooting a gun to stabbing someone with a knife.
+Skill checks could be a daring feat of athleticism, lockpicking a door, performing first aid, ... 
+
+\subsection{Initiative}
+When a new round begins every combatant must decide if they wish to take a Fast or Slow turn this round.
+In a Fast turn you can take and action \textit{and} a maneuver (or two maneuvers), 
+while in a Slow turn you can only take an action \textit{or} a maneuver.  
+Then everyone must take their turn in the following order:
+Fast turns from the initiating side go first, followed by Fast turns from the defending side,
+then Slow turns from the initiating side, and finally Slow turns from the defending side.
+If multiple combatants go at the same time they can choose the order in which they act among themselves. 
+
+% \begin{enumerate}
+%     \item Initiating side (\textit{Fast})
+%     \item Defending side (\textit{Fast})
+%     \item Initiating side (\textit{Slow})
+%     \item Defending side (\textit{Slow})
+% \end{enumerate}
 
 
 \section{Attacking \& Defending}
 
 \subsection{Melee Fights}
-Melee attacks are always resolved as opposed checks between two combatants, 
-usually using the Brawl skill. 
-The attacker always always uses their Brawl skill, 
-and the defender has a choice between a few options: Defend, Fight back, or Dodge.
+Melee attacks are usually resolved as opposed checks between two combatants' Brawl skills.
+If the attacker succeeds they manage to land a hit and deal damage based on their weapon and number of successes.
 
-Defending and fighting back both use the Brawl skill, while Dodge uses the \Agility{} characteristic instead.
-The details of how each choice affect the outcome of a roll are summarised in this table:
+The defender also has the option to try and dodge the attack instead.
+Dodging represents ducking behind cover or jumping out of range of the attacker, 
+and uses the defender's Agility characteristic instead of their Brawl.
+You can only Dodge if you haven't already attacked this round, and when you Dodge you can no longer attack for the rest of the round.
+
 
 % When being attacked, either:
 %     - **Dodge**: Roll Dex to avoid, *but* fall prone afterwards
@@ -562,7 +582,7 @@ The details of how each choice affect the outcome of a roll are summarised in th
 \subsubsection{Bonuses \& Penalties}
 You get a +1 bonus to any melee attack roll for every other opponent that's currently engaged with your target.
 
-\subsection{Damage}
+\subsection{Damage} \label{damage}
 The damage dealt by a successful hit is equal to the base damage of your weapon, 
 plus the number of successes rolled (\textit{before} cancellation). 
 Instead of having a fixed base damage like firearms, melee weapons will often deal extra damage based on your Toughness.
@@ -725,6 +745,10 @@ Drawback:
     (or maybe no rolling, maybe just reduce stress damage by the bond rank (or rank + roll))
     \item Fainting: what about an option to faint whenever you gain stress to negate said stress entirely.
     I think some version of this is part of trail of cthulhu
+    \item have a good looka tht eh Genesys combat system, especially for maneuvers / actions and such.
+    The way they do it would tie in very nicely with the SotDL initiative system.
+    The one thing I'd add is the option to Dodge when attacked (as long as you still have a maneuver or action available this round)
+    \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
 }
 
 \clearpage
