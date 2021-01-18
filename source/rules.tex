@@ -10,6 +10,10 @@
 
 \chapter{Rolling Dice}
 
+% {
+%     \setlength{\columnseprule}{0pt}
+%     \setlength{\columnsep}{1\baselineskip}
+%     \begin{multicols}{2}
 A standard dice roll in Untold Aeons has two "pools" of dice: the skill pool and the difficulty pool. 
 For each pool you roll a number of d6 dice equal to your skill level, or difficulty level respectively.
 You don't simply add up the values of these dice, but instead you count successes and failures.
@@ -27,6 +31,10 @@ Successes and failures are counted as follows:
     \textbf{2} & & \\
     \textbf{1} & 1 Advantage & 1 Drawback\\
 }{}
+%     \vfill\null
+%     \end{multicols}
+% }
+
 
 In addition to this, whenever you roll a 1 on a skill dice you generate an \textit{Advantage}, 
 and when you roll a 1 on a difficulty dice you generate a \textit{Drawback}. 
@@ -40,8 +48,9 @@ These don't affect whether you succeed or fail, but they add additional effects 
 }
 
 \subsection{Bonuses \& Penalties}
-Any situational bonuses simply add extra dice to the "skill pool". 
-Similarly, situational penalties add extra dice to the "difficulty pool".
+Any situational bonuses simply add extra dice to the \textit{skill pool}. 
+Similarly, situational penalties add extra dice to the \textit{difficulty pool}. 
+Bonuses and penalties also cancel each other out. 
 
 
 \chapter{Character creation}
@@ -99,6 +108,10 @@ After deciding on your Characteristics you should calculate your derived attribu
     % \item[Soak $(Toughness / 2, rounded\ up)$]
     % A higher soak means you'll take less damage from incoming attacks. 
 
+    % \item[Move Speed $(5 + Agility)$]
+    % The base "walking" speed (in yards per round) of the character while busy fighting or shooting.
+    % In a full-on sprint characters can go up to 5 times their Move Speed per round, while a sustained run is about 2-3 times their speed per round
+
     \item[Wound Limit $(10 + Toughness)$] 
     This represents how much physical damage you can take before you become incapacitated.
     
@@ -106,17 +119,6 @@ After deciding on your Characteristics you should calculate your derived attribu
     Characters with a higher Stress limit are able to withstand more stress before succumbing to it.
 
 \end{description}
-
-% \fancytable{lll}
-% {}
-% {
-%     \textbf{Stress Limit}  & 10 + Willpower\\
-%     \textbf{Health}        & 10 + Toughness\\
-%     % \textbf{Move Speed}    & 5 + Agility\\
-% }{}
-
-% Move speed represents the base "walking" speed of the character while busy fighting or shooting (in yards per round, where a round is about 6 seconds).
-% In a full-on sprint characters can go up to 5 times their Move Speed per round, while a sustained run is about 2-3 times their speed per round
 
 \section{Backgrounds}
 Your character's background represents how you make a living and what your expertise is.
@@ -321,8 +323,8 @@ which is done in parentheses after the skill.
 % }
 
 
-\chapterwithsubtitle{Story points}{(i.e. Story / Fate Points)}
-% \chapter{Story points}
+% \chapterwithsubtitle{Story Points}{(i.e. Story / Fate Points)}
+\chapter{Story Points}
 
 There are two pools, the Narrator and player pool. 
 The Narrator starts with one Story point, and the players pool starts with 1 point for each player.
@@ -332,24 +334,33 @@ This means that using a Story point can give you benefits, but will likely come 
 Whenever someone uses a Story point to get a bonus or re-roll a check 
 they should also describe what's actually happening that would change the outcome of the roll.
 For example: a player using a Story point to re-roll an Investigation check could say, 
-"...".
+"...". 
 
-\subsubsection{Player Uses:}
-\begin{itemize}[topsep=0pt]
-    \item Reroll dice (sorta like pushing)
-    \item deus ex machina: "good thing I brought that shovel!" \par(used at the Narrator's discretion)
-    \item +2 on any roll
-    \item +2 difficulty to an NPC's roll
-    \item Trigger a critical hit in combat. (more details on \autopageref{critical hit})
-\end{itemize}
+% Story points can \textit{not} be spent on Stress saves or Wound saves.
+All uses of story points are always at the Narrator's discretion.
 
-\subsubsection{Narrator Uses:}
-\begin{itemize}[topsep=0pt]
-    \item Trigger a hallucination/phobia/mania/...
-    \item +2 on an NPC's roll
-    \item +2 difficulty to a player's roll
-    \item I need more here :p
-\end{itemize}
+\vspace{\topskip}
+\begin{multicols}{2}
+    \subsubsection{Player Uses:}
+    \begin{itemize}[topsep=0pt, leftmargin=*]
+        \item +2 on any roll
+        \item +2 difficulty to an NPC's roll
+        \item Reroll any roll \textit{(sorta like pushing)}
+        \item deus ex machina: "good thing I brought that shovel!"
+        \item Trigger a critical hit in combat (more details on \autopageref{critical hit})
+    \end{itemize}
+    % \vfill\null
+    \columnbreak
+    
+    \subsubsection{Narrator Uses:}
+    \begin{itemize}[topsep=0pt, leftmargin=*]
+        \item +2 on an NPC's roll
+        \item +2 difficulty to a player's roll
+        \item Trigger a hallucination, phobia, mania, ...
+        \item I need more here :p
+    \end{itemize}
+    \vfill\null % just padding to even out the columns
+\end{multicols}
 
 % \begin{itemize}
 %     \item \textbf{Player Uses:}
@@ -706,6 +717,14 @@ Drawback:
               Dodging (or disengaging) uses Agility, and means you're scrambling for cover or distance.
               It's still an opposed roll against your opponent's Brawl, but if you lose you will fall prone. 
     }
+    \item Rename Perception to Alertness? (DG style)
+    \item Insanity: Fight, Flight, or Freeze
+    \item Bond idea: Bonds are 1-5, you can use them to lower Stress damage.
+    To do so you roll the Bond and Stress is reduced by the number of successes, 
+    afterwards you lower that bond's score by one. 
+    (or maybe no rolling, maybe just reduce stress damage by the bond rank (or rank + roll))
+    \item Fainting: what about an option to faint whenever you gain stress to negate said stress entirely.
+    I think some version of this is part of trail of cthulhu
 }
 
 \clearpage
