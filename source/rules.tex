@@ -508,8 +508,8 @@ You always heal at least 1 Wound.
 \section{Combat Round}
 Combat is handled in Rounds, where each Round is about 10 seconds long.
 During one round every combatant gets a single turn during which they can act.
-There are two main categories of things a combatant can do during their turn: Maneuvers and Actions.
-Of course they can also freely do minor things like speaking, dropping something, looking around, and so on. 
+What someone can do during their turn is split into two categories: Maneuvers and Actions.
+Of course everyone can also freely do minor things like speaking, dropping something, looking around, and so on. 
 
 \subsection{Maneuvers}
 A maneuver is anything that would take some time and effort to perform, but is easy enough to not need a skill check.
@@ -538,50 +538,88 @@ If multiple combatants go at the same time they can choose the order in which th
 %     \item Defending side (\textit{Slow})
 % \end{enumerate}
 
+% {
+%     \small
+%     \fancytable[1.5]{lcccc}
+%     {
+%         \multirow{2}{*}[-4px]{\thead{Action}} & \multirow{2}{*}[-4px]{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \multicolumn{3}{c}{\thead{Outcome}}\\
+%         \cmidrule(l){3-5}
+%                             & & \tsubhead{Attacker Wins} & \tsubhead{Defender Wins} & \tsubhead{Tie}\\
+%     }{
+%         \textbf{Dodge}      & Agility   & Attacker Hits\tnote{*} & No Hit\tnote{*} & No Hit\tnote{*}\\
+%         \textbf{Defend}     & Brawl     & Attacker Hits & No Hit & No Hit\\
+%         \textbf{Fight Back} & Brawl     & Attacker Hits & Defender Hits & Attacker Hits\\
+%     }{
+%         \item[*] The Defender also falls prone, regardless of whether they succeed or not.
+%     }
+% }
 
 \section{Attacking \& Defending}
 
-\subsection{Melee Fights}
-Melee attacks are usually resolved as opposed checks between two combatants' Brawl skills.
-If the attacker succeeds they manage to land a hit and deal damage based on their weapon and number of successes.
+\subsection{Attack Roll}
+Melee attacks always use your Brawl skill, and have a base difficulty of 2.
+Ranged attacks on the other hand use your Firearms skill, 
+and the base difficulty depends on how far away the target is:
+1 for short range, 2 for medium range, 3 for long range, and 4 for extreme range.
+The difficulty is also increased by one for every range band beyond the weapon's effective range.
+For example, if you try to shoot a pistol (with an effective range of medium) at long range
+the difficulty would be 4 (3 from long range + 1 for being one range band beyond the effective range). 
+\todoi{Explain range bands in more detail}
 
-The defender also has the option to try and dodge the attack instead.
-Dodging represents ducking behind cover or jumping out of range of the attacker, 
-and uses the defender's Agility characteristic instead of their Brawl.
-You can only Dodge if you haven't already attacked this round, and when you Dodge you can no longer attack for the rest of the round.
+
+\subsection{Situational Bonuses \& Penalties}
+\todoi{Explain stuff}
+% {
+%     \setlength{\columnseprule}{0pt}
+%     \setlength{\columnsep}{1\baselineskip}
+%     \begin{multicols}{2}
+    
+%         \fancytable{lc}
+%         {
+%             \multicolumn{2}{c}{\scshape\bfseries Melee Modifiers}\vspace{\parskip}\\
+%             \thead{Situation} & \thead{Difficulty}\\
+%         }{
+%             \textbf{6} & +1\\
+%         }{}
+%         \columnbreak
+
+%         \fancytable{lc}
+%         {
+%             \multicolumn{2}{c}{\scshape\bfseries Ranged Modifiers}\vspace{\parskip}\\
+%             \thead[l]{Situation} & \thead{Difficulty}\\
+%         }{
+%             Moving Target       & \multirow{3}{*}{+1}\\
+%             Small Target        & \\
+%             Partial Cover       & \\
+%             \cmidrule(lr){1-2}
+%             Immobilized target  & \multirow{3}{*}{-1}\\
+%             Large Target        & \\
+%             Point-blank Range   & \\
+%         }{}
+%         \columnbreak
+%         %     \vfill\null
+%     \end{multicols}
+% }
+
+When melee attacking an outnumbered target you get a +1 bonus for every ally that is also engaged with them.
 
 
-% When being attacked, either:
-%     - **Dodge**: Roll Dex to avoid, *but* fall prone afterwards
-%         - Ties are in favour of the defender
-%         - Defender takes no damage if they win
-%     - **Defend**: Roll Brawl to defend yourself
-%         - Ties are in favour of the defender
-%         - Defender takes no damage if they win
-%     - **Fight Back**: Roll Brawl to fight back  
-%         - Ties are in favour of the attacker
-%         - Defender takes no damage if they win *and* land a hit of their own
-%     - If both combatants get 0 successes nothing happens 
+\ul{
 
-{
-    \small
-    \fancytable[1.5]{lcccc}
-    {
-        \multirow{2}{*}[-4px]{\thead{Action}} & \multirow{2}{*}[-4px]{\parbox{0.6in}{\centering \textbf{Defender Skill}}} & \multicolumn{3}{c}{\thead{Outcome}}\\
-        \cmidrule(l){3-5}
-                            & & \tsubhead{Attacker Wins} & \tsubhead{Defender Wins} & \tsubhead{Tie}\\
-    }{
-        \textbf{Dodge}      & Agility   & Attacker Hits\tnote{*} & No Hit\tnote{*} & No Hit\tnote{*}\\
-        \textbf{Defend}     & Brawl     & Attacker Hits & No Hit & No Hit\\
-        \textbf{Fight Back} & Brawl     & Attacker Hits & Defender Hits & Attacker Hits\\
-    }{
-        \item[*] The Defender also falls prone, regardless of whether they succeed or not.
-    }
+    \item +1 difficulty when firing at moving target, small target, partial cover, ...
+    \item -1 difficulty when firing at a large target, ...
 }
+You also get a +2 bonus to your skill if you spend a round aiming and preparing the shot.
 
-\subsubsection{Bonuses \& Penalties}
-You get a +1 bonus to any melee attack roll for every other opponent that's currently engaged with your target.
 
+\subsection{Dodging}
+When being attacked you have the option to dodge by trying to duck behind cover or jumping out of range of the attacker. 
+You can only dodge when you're aware you're being attacked.
+
+Dodging increased the difficulty of the attacker's roll by half you Agility (rounding \textit{up}).
+However, if you dodge you will be prone until they get up again (which takes a Manuever).
+
+ 
 \subsection{Damage} \label{damage}
 The damage dealt by a successful hit is equal to the base damage of your weapon, 
 plus the number of successes rolled (\textit{before} cancellation). 
@@ -603,30 +641,6 @@ so their base damage is entirely determined by your Toughness.
 Critical hits double the amount of damage you deal from your successes 
 (but not the weapon base damage).
 They can only be triggered by spending a Story point after successfully landing the hit. 
-
-
-\subsection{Firearms}
-Ranged attacks have a difficulty set based on the circumstances of the shot.
-The target also can \textit{not} defend or fight back like they could in a melee fight,
-They can still dodge however if they're aware they're being shot at. 
-If they choose to do so the difficulty of the shot is increased by half the target's Agility (rounding \textit{up}).
-However, the person diving for cover will be prone until they get up again (which takes an action).
-
-\subsubsection{Base Difficulty}
-\fancytable{ccccc}
-{
-    & \thead{$Point\ Blank$} & \thead{$\leq Range$} & \thead{$\leq 2\times Range$} & \thead{$\geq 2\times Range$}\\
-}{
-    \textbf{Difficulty} & 1 & 2 & 3 & 4\\
-}{}
-
-\subsubsection{Difficulty Modifiers}
-\ul{
-
-    \item +1 difficulty when firing at moving target, small target, partial cover, ...
-    \item -1 difficulty when firing at a large target, ...
-}
-You also get a +2 bonus to your skill if you spend a round aiming and preparing the shot.
 
 \subsection{Weapon Traits}
 {
@@ -749,7 +763,7 @@ Drawback:
     The way they do it would tie in very nicely with the SotDL initiative system.
     The one thing I'd add is the option to Dodge when attacked (as long as you still have a maneuver or action available this round)
     \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
-    \item double check CoC combat maneuvers to see if I wanna add something like that
+    \item double check CoC combat maneuvers to see if I wanna add something like that    
 }
 
 \clearpage
