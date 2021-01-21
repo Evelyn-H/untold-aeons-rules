@@ -26,7 +26,8 @@ Successes and failures are counted as follows:
 }{
     \textbf{6} & 2 Successes & 2 Failures\\
     \textbf{5} & 1 Success & 1 Failure\\
-    \textbf{4} & 1 Success & 1 Failure\\
+    % \textbf{4} & 1 Success & 1 Failure\\
+    \textbf{4} & & \\
     \textbf{3} & & \\
     \textbf{2} & & \\
     \textbf{1} & 1 Advantage & 1 Drawback\\
@@ -492,18 +493,22 @@ Additionally, you take one damage every minute (or round?) until your receive me
 \subsection{Medical Care}
 A character can receive medical care for wounds either from a First Aid or Medicine skill.
 First Aid can only be attempted shorty after the injury was suffered, and can only be attempted once.
-The difficulty of the Fist Aid check is based on the severity of the character's wounds 
-and how much time has passed since the injury.
-A successful First Aid check heals a number of wounds equal to \textit{half} the number of successes rolled (rounded up, and \textit{before} cancellation).
+% The difficulty of the Fist Aid check is based on the severity of the character's wounds 
+% and how much time has passed since the injury.
+% A successful First Aid check heals a number of wounds equal to \textit{half} the number of successes rolled (rounded up, and \textit{before} cancellation).
+First aid checks are always unopposed (difficulty 0), 
+and you simply heal a number of wounds equal to \textit{half} (rounded up) the number of successes rolled.
 
-The Medicine skill works very similarly except it takes at least 1 hour to execute,
+The Medicine skill works very similarly except it takes at least 1 hour and proper supplies to execute,
 and it heals for the full number of successes rolled instead of just half.
 
 \subsection{Natural Healing}
-Once a day you make an unopposed Toughness check. 
-If your injuries are below your limit you heal one wound for every success. 
-If they are above your limit you heal a number of wounds equal to half the number of successes (rounded up).
-You always heal at least 1 Wound.
+Every day you get a full night's rest you recover some wounds. 
+If your injuries are below your limit you make an unopposed Toughness check,
+and heal a number of wounds equal to \textit{half} (rounded up) the number of successes rolled. 
+If you rolled no successes you still heal one wound.
+If your wounds are above your limit you only heal a single wound per day.
+% Every day you get a full night's sleep you heal one wound.
 
 \section{Combat Round}
 Combat is handled in Rounds, where each Round is about 10 seconds long.
@@ -825,6 +830,10 @@ Drawback:
     The one thing I'd add is the option to Dodge when attacked (as long as you still have a maneuver or action available this round)
     \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
     \item double check CoC combat maneuvers to see if I wanna add something like that    
+    \item IMPORTANT: I think very-low skill with high difficulty are a bit too punishing.
+    A good way to fix that would be to remove the successes on 4s (so just 1 success on 5, two on 6).
+    Though this'd definitely need some re-tweaking here and there cause the number of successes will be lower on average
+    (Actually, it seems like the difference in damage rolls turns out to not be \textit{that} big...)
 }
 
 \clearpage
