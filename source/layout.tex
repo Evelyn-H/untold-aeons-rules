@@ -148,8 +148,9 @@
 % \setsecnumdepth{subsection}
 \setsecnumdepth{chapter}
 \setsecheadstyle{\LARGE\scshape\bfseries\raggedright}
-% \setsubsecheadstyle{\Large\scshape\bfseries\itshape\raggedright}
-\setsubsecheadstyle{\large\scshape\bfseries\raggedright}
+\newcommand{\ulinegray}[1]{\textcolor{gray}{\uline{\textcolor{black}{#1}}}}
+\newcommand\underlinedhead[1]{\ulinegray{#1}}
+\setsubsecheadstyle{\large\scshape\bfseries\raggedright\underlinedhead}
 \setsubsubsecheadstyle{\normalsize\scshape\bfseries\raggedright}
 \setaftersubsubsecskip{1sp} % semi-hack to remove spacing after subsebsections (1sp is the smallest unit)
 

@@ -588,9 +588,10 @@ the difficulty would be 4 (3 from long range + 1 for being one range band beyond
 %             \multicolumn{2}{c}{\scshape\bfseries Ranged Modifiers}\vspace{\parskip}\\
 %             \thead[l]{Situation} & \thead{Difficulty}\\
 %         }{
-%             Moving Target       & \multirow{3}{*}{+1}\\
+%             Moving Target       & \multirow{4}{*}{+1}\\
 %             Small Target        & \\
 %             Partial Cover       & \\
+%             Engaged in melee    & \\
 %             \cmidrule(lr){1-2}
 %             Immobilized target  & \multirow{3}{*}{-1}\\
 %             Large Target        & \\
@@ -642,24 +643,24 @@ Critical hits double the amount of damage you deal from your successes
 (but not the weapon base damage).
 They can only be triggered by spending a Story point after successfully landing the hit. 
 
-\subsection{Weapon Traits}
-{
-    \setlength{\parskip}{0pt}  % remove this once I add text before it
-    \begin{description}
-        % \item[Accurate <N>]
-        % This weapon's accuracy makes it easier to use, adding N bonus dice to the relevant combat skill.
+% \subsection{Weapon Traits}
+% {
+%     \setlength{\parskip}{0pt}  % remove this once I add text before it
+%     \begin{description}
+%         % \item[Accurate <N>]
+%         % This weapon's accuracy makes it easier to use, adding N bonus dice to the relevant combat skill.
 
-        % \item[Inccurate <N>]
-        % Inaccurate weapons add N penalty dice to the difficulty of the relevant combat skill.
+%         % \item[Inccurate <N>]
+%         % Inaccurate weapons add N penalty dice to the difficulty of the relevant combat skill.
 
-        \item[Rapid Fire <N>] 
-        When you use this weapon you may choose to rapidly fire many shots instead of just one.
-        If you do this you take 1 penalty dice to your Firearms skill. 
-        Then, if your attack succeeds, you manage to hit a number of shots up to your MoS (Margin of Success), 
-        but never more than \textbf{N}. 
-        Each shot deals damage as usual (base damage + \#S).
-    \end{description}
-}
+%         \item[Rapid Fire <N>] 
+%         When you use this weapon you may choose to rapidly fire many shots instead of just one.
+%         If you do this you take 1 penalty dice to your Firearms skill. 
+%         Then, if your attack succeeds, you manage to hit a number of shots up to your MoS (Margin of Success), 
+%         but never more than \textbf{N}. 
+%         Each shot deals damage as usual (base damage + \#S).
+%     \end{description}
+% }
 
 
 
@@ -687,8 +688,68 @@ Drawback:
   - 3:
       - ?
   
+\pagebreak
+\section{Weapons}
 
+\newcommand{\weapontable}[4][2]{
+    \protect\renewcommand{\arraystretch}{1.2}%
+    \renewcommand\tabularxcolumn[1]{m{##1}} % fixes vertical centering for X columns
+    \small
+    \begin{threeparttable}
+        \begin{tabularx}{\linewidth}{@{}m{1.0in}*{#1}{>{\centering\arraybackslash}m{0.5in}}X@{}}
+            #2
+            \toprule
+            #3
+            \bottomrule
+        \end{tabularx}
+        \ifthenelse{\isempty{#4}}
+        {}{
+            \begin{tablenotes}
+                \footnotesize
+                #4
+            \end{tablenotes}
+        }
+    \end{threeparttable}
+    \par
+}
 
+\subsection{Melee Weapons}
+% {
+%     \setlength{\columnseprule}{0pt}
+%     %     \setlength{\columnsep}{1\baselineskip}
+%     \begin{multicols}{2}
+%         \vfill\null
+%         \columnbreak
+\weapontable[1]{
+    \thead[l]{Weapon} & \thead{Damage} & \thead[l]{Effects}\\
+}{
+    Unarmed         & 0+    & ...\\ 
+    Brass Knuckles  & 2+    & ...\\ 
+    Knife           & 2+    & ...\\ 
+    Club            & 3+    & ...\\
+    Machete / Sword & 4+    & ...\\ 
+    Hatchet         & 4+    & ...\\
+}{
+    % \item[*] Melee weapons don't have a range, they can only be used when engaged in melee combat.
+}
+%     \end{multicols}
+% }
+
+\vspace{\baselineskip}
+
+\subsection{Firearms}
+\weapontable[2]{
+    \thead[l]{Weapon} & \thead{Damage} & \thead{Range} & \thead[l]{Effects}\\
+}{
+    Small pistol    & 4     & Short     & Easier to conceal\\ 
+    Pistol          & 5     & Medium    & ...\\ 
+    Heavy pistol    & 6     & Medium    & ...\\ 
+    Shotgun         & 10    & Medium    & \footnotesize Full damage at Short range, \textonehalf\ at Medium range, and \textonequarter\ beyond that.\\
+    Submachine Gun  & 6     & Medium    & Full Auto?\\
+    Rifle           & 7     & Long      & ...\\
+    % Heavy Rifle     & 8     & Long      & ...\\
+}{}
+        
 
 \chapter{Open Questions \& Feedback}
 \ul{
