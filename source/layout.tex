@@ -23,15 +23,15 @@
 % \renewcommand{\cftsectionpagefont}{\footnotesize} 
 
 % this makes multitoc columns unbalanced
-\makeatletter
-\renewcommand*{\@starttoc}[1]{%
-   \ifthenelse{\boolean{@multitoc@toc}\and\equal{#1}{toc}}{%
-      \begin{multicols*}{\multicolumntoc}%
-         \@multitoc@starttoc{#1}%
-      \end{multicols*}%
-      }{}%
-   }
-\makeatother
+% \makeatletter
+% \renewcommand*{\@starttoc}[1]{%
+%    \ifthenelse{\boolean{@multitoc@toc}\and\equal{#1}{toc}}{%
+%       \begin{multicols*}{\multicolumntoc}%
+%          \@multitoc@starttoc{#1}%
+%       \end{multicols*}%
+%       }{}%
+%    }
+% \makeatother
 
 %%% PARAGRAPHS
 %%%-----------

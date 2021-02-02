@@ -10,8 +10,19 @@
     openany, % A chapter may start on either a recto or verso page.
 ]{memoir}
 
+% font stuff
+
 \usepackage[utf8]{inputenc} % If utf8 encoding
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+
+% alegreya!
+\usepackage{Alegreya}
+\renewcommand*\oldstylenums[1]{{\AlegreyaOsF #1}}
+
+% \usepackage{fontspec} % for lualatex
+% \setmainfont{Alegreya}
+
+
 \usepackage[latin, english]{babel} % English please
 \usepackage[final]{microtype} % Less badboxes
 
@@ -27,10 +38,6 @@
 % \usepackage{tikz} % Figures
 \usepackage{graphicx} % Include figures
 \graphicspath{{images/}}
-
-% alegreya!
-\usepackage{Alegreya}
-\renewcommand*\oldstylenums[1]{{\AlegreyaOsF #1}}
 
 \usepackage{xifthen} % for easy-to-use conditionals (specifically \ifthenelse)
 \usepackage{xcolor} % rainbows!
