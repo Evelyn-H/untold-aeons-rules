@@ -255,13 +255,13 @@ which is done in parentheses after the skill.
 {
     % \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
 }{
-    Accounting                      & History                       & Piloting                      \\
-    Appraise                        & Knowledge \textit{(Specific)} & Occult                \\
-    Animal Handling                 & Language \textit{(Specific)}  & Psychoanalysis   \\
-    Craft \textit{(Specific)}       & Law                           & Sleight of Hand               \\
-    Disguise                        & Locksmithing                  &                               \\
-    Electronics                     & Medicine                      &                               \\
-    Heavy Machinery                 & Navigation                    &                               \\
+    Accounting                      & Knowledge \textit{(Specific)} & Occult                \\
+    Animal Handling                 & Language \textit{(Specific)}  & Psychoanalysis        \\
+    Craft \textit{(Specific)}       & Law                           & Sleight of Hand       \\
+    Disguise                        & Locksmithing                  &                       \\
+    Electronics                     & Medicine                      &                       \\
+    Heavy Machinery                 & Navigation                    &                       \\
+    History                         & Piloting                      &                       \\
 }{}
 
 % \begin{multicols}{3}
@@ -697,6 +697,7 @@ Drawback:
 \section{Weapons}
 
 \newcommand{\weapontable}[4][2]{
+    {
     \protect\renewcommand{\arraystretch}{1.2}%
     \renewcommand\tabularxcolumn[1]{m{##1}} % fixes vertical centering for X columns
     \small
@@ -716,6 +717,7 @@ Drawback:
         }
     \end{threeparttable}
     \par
+    }
 }
 
 \subsection{Melee Weapons}
@@ -757,8 +759,12 @@ Drawback:
         
 
 \chapter{Open Questions \& Feedback}
+{ % little temp environment for this chapter
+\setlist[itemize]{topsep=0pt}
+\small
+
+\subsection{Combat}
 \ul{
-    \item What a bout a RQ-esque Passions mechanic?
     \item There isn't enough damage...
     \ul{
         \item Maybe remove Toughness as armor?
@@ -777,32 +783,12 @@ Drawback:
         %     \item Or... Story points for crits? This has potential! :p
         % }
     }
-    % \item All Stress saves should be Willpower
-    % \item \ul{
-    %     \item This does mean we need more things to do with Intellect.
-    %     \ul{
-    %         \item Magic / reading tomes is one option
-    %         \item Idea rolls; maybe make them more mechanically relevant
-    %         \item Honestly, just starting skills, idea rolls, and magic is \textit{probably} enough...
-    %     }
-    % }
-    \item be explicit about Idea / Knowledge rolls (Intellect)
-    % \item maybe also remove Knowledge in favour of Intellect
-    \item need more Story point uses (especially for the Keeper) and a reason to avoid hoarding them
-    % \item get rid of the speed stat, it's not needed
-    \item Maybe let people roll for sanity with Mythos Knowledge instead of Willpower when it's appropriate
-    \item Idea: what about just getting rid of Backgrounds entirely? 
-    instead players \textit{ instead also usecould} just pick 4(?) professional skills + spend xp on anything.
-    Simple. Quick. Free!
-    \item HYPERLINK ALL THE THINGS!
     \item How to handle shotguns? No clue :p
     \item Maybe get rid of item traits as a system:
     \ul{
         \item work rapid-fire into the weapon ammo stat or something (like coc)
         \item still have effects for weapons, but don't strictly codify them
     }
-    \item Look at Darkest Dungeon for Stress ideas
-    \item Also have a look at savage worlds with their "edges and hindrances"
     % \item Combat Idea:
     % \ul{
     %     \item Combine Dodge and Disengage into one "action"
@@ -817,22 +803,26 @@ Drawback:
     %           Dodging (or disengaging) uses Agility, and means you're scrambling for cover or distance.
     %           It's still an opposed roll against your opponent's Brawl, but if you lose you will fall prone. 
     % }
+    
+    \item have a good looka tht eh Genesys combat system, especially for maneuvers / actions and such.
+    The way they do it would tie in very nicely with the SotDL initiative system.
+    The one thing I'd add is the option to Dodge when attacked (as long as you still have a maneuver or action available this round)
+    \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
+    \item double check CoC combat maneuvers to see if I wanna add something like that    
+}
+    
+\subsection{Sanity \& Motivations}
+\ul{
+    \item Look at Darkest Dungeon for Stress ideas
+    \item Maybe let people roll for sanity with Mythos Knowledge instead of Willpower when it's appropriate
     \item Insanity: Fight, Flight, or Freeze
+    \item Also have a look at savage worlds with their "edges and hindrances"
     \item Bond idea: Bonds are 1-5, you can use them to lower Stress damage.
     To do so you roll the Bond and Stress is reduced by the number of successes, 
     afterwards you lower that bond's score by one. 
     (or maybe no rolling, maybe just reduce stress damage by the bond rank (or rank + roll))
     \item Fainting: what about an option to faint whenever you gain stress to negate said stress entirely.
     I think some version of this is part of trail of cthulhu
-    \item have a good looka tht eh Genesys combat system, especially for maneuvers / actions and such.
-    The way they do it would tie in very nicely with the SotDL initiative system.
-    The one thing I'd add is the option to Dodge when attacked (as long as you still have a maneuver or action available this round)
-    \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
-    \item double check CoC combat maneuvers to see if I wanna add something like that    
-    \item IMPORTANT: I think very-low skill with high difficulty are a bit too punishing.
-    A good way to fix that would be to remove the successes on 4s (so just 1 success on 5, two on 6).
-    Though this'd definitely need some re-tweaking here and there cause the number of successes will be lower on average
-    (Actually, it seems like the difference in damage rolls turns out to not be \textit{that} big...)
     \item I \textit{NEED} a bonds / relationships system!
     \ul{
         \item Maybe something like: 2 "normal: ones, and one with another party member
@@ -845,15 +835,34 @@ Drawback:
             \item \textit{In addition} you can "risk" your bonds to lower any instance of stress gain
             \ul{
                 \item Some options: reduce it by a fixed amount, by the level of the bond, by number of unopposed successes rolled, 
-                \item \textit{or my favourite:} reduce it by the level of the bond, and roll your Bond with a difficulty of the stress loss, if you fail your bond lowers by one. 
+                \item \textit{or my favourite:} roll your Bond with a difficulty equal to the stress gain. Regardless of success or failure you reduce the stress gain by the level of the bond, and if you fail your bond lowers by one. 
             }
             \item just need a nice way to (re)increase existing bonds and/or gain new bonds for the sake of longer-term games
         }
     }
+}
+
+\subsection{General}
+\ul{
+    \item be explicit about Idea / Knowledge rolls (Intellect)
+    % \item maybe also remove Knowledge in favour of Intellect
+    \item need more Story point uses (especially for the Keeper) and a reason to avoid hoarding them
+    % \item get rid of the speed stat, it's not needed
+    \item Idea: what about just getting rid of Backgrounds entirely? 
+    instead players \textit{ instead also usecould} just pick 4(?) professional skills + spend xp on anything.
+    Simple. Quick. Free!
+    \item HYPERLINK ALL THE THINGS!
+    % \item IMPORTANT: I think very-low skill with high difficulty are a bit too punishing.
+    % A good way to fix that would be to remove the successes on 4s (so just 1 success on 5, two on 6).
+    % Though this'd definitely need some re-tweaking here and there cause the number of successes will be lower on average
+    % (Actually, it seems like the difference in damage rolls turns out to not be \textit{that} big...)
     \item now that I changed penalties to be +1 diff. instead of -1 skill 
     I might be able to bring back having a penalty when Shaken or Severely Injured.
     Though I'd still have to be careful with it also messing with with their respective saves and such, but it's an option. 
+    \item I need to be way clearer and more consistent about bonus/penalty dice terminology.
+    i.e. don't say "+1", but "one bonus dice"
 }
+
 
 % \clearpage
 \section{Playtesters}

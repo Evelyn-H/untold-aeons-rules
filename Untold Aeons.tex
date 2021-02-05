@@ -70,6 +70,10 @@
 \let\oldtodo\todo
 \renewcommand{\todo}[1]{\oldtodo{\textbf{Todo:} \textit{#1}}}
 \newcommand{\todoi}[1]{\oldtodo[inline]{\textbf{Todo:} \textit{#1}}}
+\newcommand{\note}[2][Note]{
+    \setlist[itemize]{topsep=0pt}
+    \oldtodo[inline, caption={}]{\small\textbf{#1:} #2}
+}
 
 \usepackage{wrapfig}
 
