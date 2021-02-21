@@ -72,6 +72,8 @@ but they're mostly used to influence other mechanics.
 To create your character you must distribute 12 points between the 4 characteristics, 
 with a minimum of 1 and maximum of 5 for each characteristic.
 
+% \note[Optional]{\textit{If you want to roll for stats instead (for each Characteristic): roll 3d6, reroll all 6s, and pick the middle value.}}
+
 \begin{description}
     \item[Agility] 
     Your character's physical nimbleness, speed, and general athletic capability.
@@ -211,9 +213,29 @@ You'll have to spend additional Experience to increase it beyond that.
 
 
 
-\section{Motivations}
-\todoi{Talk about character Motivations and guide the player to picking starting motivations.}
+% \section{Bonds \& Motivation}
+\section{Backstory}
+% \todoi{Talk about character Motivations and guide the player to picking starting motivations.}
 
+\todoi{Some fluff intro}
+
+First, choose a character motivation, the thing that drives your character forward. 
+This purely serves to deepen the personality of your character, and can be just about anything.
+For example: \textit{"I want to further my knowledge of X"}, \textit{"I need to avenge X"}, \textit{"Faith"}, ...
+
+Next, choose a Flaw or Vice. Similarly this can be whatever you want.
+For example: \textit{"Terrible gambler"}, \textit{"Addict"}, ...
+
+\todoi{Get better examples :p}\
+
+\subsection{Bonds}
+Bonds are people, or groups of people your character draws strenth from. 
+These can weaken or get stronger over time, but they are essential in keeping your character grounded and sane.
+You start with two bonds, and you can have 3 bonds at most. 
+They always start with a value of 3, but can change over time, 
+either by nurturing them or by drawing strenth from them in tough times and possibly straining them.
+
+See \autopageref{sanity-bonds} for more detail of how to use Bonds in play.
 
 \chapter{Skills}
 There are two different kinds of skills: standard and professional skills.
@@ -255,14 +277,18 @@ which is done in parentheses after the skill.
 {
     % \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
 }{
-    Accounting                      & Knowledge \textit{(Specific)} & Occult                \\
-    Animal Handling                 & Language \textit{(Specific)}  & Psychoanalysis        \\
-    Craft \textit{(Specific)}       & Law                           & Sleight of Hand       \\
-    Disguise                        & Locksmithing                  &                       \\
-    Electronics                     & Medicine                      &                       \\
-    Heavy Machinery                 & Navigation                    &                       \\
-    History                         & Piloting                      &                       \\
+    Accounting                      & History                       & Occult                \\
+    Animal Handling                 & Knowledge \textit{(Specific)} & Psychoanalysis        \\
+    Craft \textit{(Specific)}       & Language \textit{(Specific)}  & Sleight of Hand       \\
+    Disguise                        & Law                           & \\
+    Electronics                     & Locksmithing                  & \\
+    Heavy Machinery                 & Medicine                      & \\
 }{}
+
+While this list is trying to include the most common professional skills an investigator might have,
+it is by no means meant to be complete.
+If you think your character should have a skill that is not listed here
+you can absolutely use that as long as you discuss this with your Narrator beforehand.
 
 % \begin{multicols}{3}
 %     \begin{itemize}[
@@ -387,7 +413,7 @@ All uses of story points are always at the Narrator's discretion.
 Instead of a Sanity number, characters just have permanent side effects (manias, phobias, ...) when stress goes above the limit. These can then be roleplayed and can also change over time. (e.g. "recovering in a mental ward" as a way to getting rid of them)
 
 \section{Sanity Checks}
-When something happens that \textit{ instead also usecould} cause distress to a character 
+When something happens that could cause distress to a character 
 the Narrator may ask for a "Sanity Check" to see how they react.
 Sanity checks always use the character's Willpower, and the difficulty of the check will be set based on the severity of the cause. 
 Any Advantages or Drawbacks rolled will result in a short term effect.
@@ -402,12 +428,30 @@ Any Advantages or Drawbacks rolled will result in a short term effect.
     \textbf{Drawback} & Scream in terror, involuntary action in combat, freeze, ...\\
 }{}
 
-If your stress goes above your limit you must make an Willpower roll with 1 difficulty dice for each point you are above your limit.
+\label{sanity-bonds}
+\todoi{Move this to a separate "Coping Mechanisms" subsection}
+Whenever you gain Stress you also have to option to "project" it onto one of your bonds.
+This lets you temporarily draw strength from but you also damage the Bond in the process.
+If you choose to do so the stress gain is reduced by the rank of your Bond, 
+and then the rank of the Bond is also reduced by one.
+% This lets you temporarily draw strength from but also risk damaging the Bond.
+% If you choose to do so you must make a check using one of your Bonds 
+% with a difficulty equal the amount of stress you're gaining.
+% Regardless of whether you fail or succeed this roll, the incoming stress will be reduced by the rank of your Bond,
+% If you fail the Bond will also be reduced by one. 
+If the rank of your Bond reaches 0 you lose it entirely.
+
+\subsection{Reaching Your Limit}
+If your Stress goes above your limit you must make a check using one of your Bonds with 1 difficulty dice for each point you are above your limit.
 If you succeed nothing happens, though you must roll again if you gain more stress,
 but if you fail you become Shaken.
 
-If your Stress goes above \textit{twice} limit make an Willpower save or go temporarily insane / fall unconsious.
-This follows the same pattern as the save for becoming Shaken. So the difficulty is how far you're above your limit (twice the limit in this case), and failing the save makes it happen while succeeding postpones it a bit.
+You must do the same if your Stress goes above \textit{twice} your limit.
+If you fail this check you go temporarily insane or fall unconsious.
+\note[Idea]{Fight, Flight, or Freeze?}
+
+% If your Stress goes above \textit{twice} limit make an Willpower save or go temporarily insane / fall unconsious.
+% This follows the same pattern as the save for becoming Shaken. So the difficulty is how far you're above your limit (twice the limit in this case), and failing the save makes it happen while succeeding postpones it a bit.
 
 
 \subsection{Shaken}
@@ -619,10 +663,10 @@ You also get a +2 bonus to your skill if you spend a round aiming and preparing 
 
 
 \subsection{Dodging}
-When being attacked you have the option to dodge by trying to duck behind cover or jumping out of range of the attacker. 
-You can only dodge when you're aware you're being attacked.
+When being attacked you have the option to dodge by desperately trying to duck behind cover or jumping out of range of the attacker. 
+You can only dodge when you're aware of the incoming attack.
 
-Dodging increased the difficulty of the attacker's roll by half you Agility (rounding \textit{up}).
+Dodging increases the difficulty of the attacker's roll by half you Agility (rounding \textit{up}).
 However, if you dodge you will be prone until they get up again (which takes a Manuever).
 
  
@@ -752,10 +796,18 @@ Drawback:
     Pistol          & 5     & Medium    & ...\\ 
     Heavy pistol    & 6     & Medium    & ...\\ 
     Shotgun         & 10    & Medium    & \footnotesize Full damage at Short range, \textonehalf\ at Medium range, and \textonequarter\ beyond that.\\
-    Submachine Gun  & 6     & Medium    & Full Auto?\\
+    Submachine Gun  & 6     & Medium    & Full Auto\tnote{*}\\
     Rifle           & 7     & Long      & ...\\
     % Heavy Rifle     & 8     & Long      & ...\\
-}{}
+}{
+    \item[*] When using this weapon you can choose to fire in full automatic mode.
+}
+
+\subsection{Full Automatic Fire}
+You must choose to use full automatic mode before making your attack,
+and if you do so your attack suffers one additional penalty dice.
+If the attack succeeds you land one additional hit for every advantage you rolled. 
+Additional hits deal damage as usual.
         
 
 \chapter{Open Questions \& Feedback}
@@ -784,11 +836,11 @@ Drawback:
         % }
     }
     \item How to handle shotguns? No clue :p
-    \item Maybe get rid of item traits as a system:
-    \ul{
-        \item work rapid-fire into the weapon ammo stat or something (like coc)
-        \item still have effects for weapons, but don't strictly codify them
-    }
+    % \item Maybe get rid of item traits as a system:
+    % \ul{
+    %     \item work rapid-fire into the weapon ammo stat or something (like coc)
+    %     \item still have effects for weapons, but don't strictly codify them
+    % }
     % \item Combat Idea:
     % \ul{
     %     \item Combine Dodge and Disengage into one "action"
@@ -804,18 +856,22 @@ Drawback:
     %           It's still an opposed roll against your opponent's Brawl, but if you lose you will fall prone. 
     % }
     
-    \item have a good looka tht eh Genesys combat system, especially for maneuvers / actions and such.
-    The way they do it would tie in very nicely with the SotDL initiative system.
-    The one thing I'd add is the option to Dodge when attacked (as long as you still have a maneuver or action available this round)
-    \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
+    % \item have a good look at the Genesys combat system, especially for maneuvers / actions and such.
+    % The way they do it would tie in very nicely with the SotDL initiative system.
+    % The one thing I'd add is the option to Dodge when attacked (as long as you still have a maneuver or action available this round)
+    % \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
     \item double check CoC combat maneuvers to see if I wanna add something like that    
+    \item maybe allow 1 extra maneuver / round for a certain stress cost (like Genesys)
 }
     
 \subsection{Sanity \& Motivations}
 \ul{
     \item Look at Darkest Dungeon for Stress ideas
     \item Maybe let people roll for sanity with Mythos Knowledge instead of Willpower when it's appropriate
-    \item Insanity: Fight, Flight, or Freeze
+    \item Insanity: Fight, Flight, or Freeze (or Faint?)
+    \item Idea: when you hit 2x limit you FFFF, (or \textit{just} faint?)
+    then once a minute(?) you make an unopposed willpower check and recover that much Stress.
+    Repeat until you go below 2xlimit again
     \item Also have a look at savage worlds with their "edges and hindrances"
     \item Bond idea: Bonds are 1-5, you can use them to lower Stress damage.
     To do so you roll the Bond and Stress is reduced by the number of successes, 
@@ -840,6 +896,18 @@ Drawback:
             \item just need a nice way to (re)increase existing bonds and/or gain new bonds for the sake of longer-term games
         }
     }
+    \item rename Sanity checks to Stress checks and be consistent
+    \item Also, what do advantages / drawbacks on shaken saves mean?
+    \item Ideas from tooboots:
+    \ul {
+        \item Okay, how bout up to your limit disadvantages cause instantaneous effects (eg scream, drop something, or have a momentary hallucination); 
+        from your limit to twice your limit disadvantages cause ongoing effects (eg too scared to speak, too scared to run, persistent hallucinations, migraine); 
+        and after twice you automatically get a severe permanent trauma
+        \item Oh!! What if the player can choose to take permanent traumas to regain san! after a certain amount of tine passes
+        That lets the players recover, and it treats mental illness as a way of coping. 
+        It's very thematically appropriate, and it's more nuanced than the way CoC treats mental illness as a punishment 
+        Plus it puts the choice in the players' hands, which is more dramatic
+    }
 }
 
 \subsection{General}
@@ -861,6 +929,7 @@ Drawback:
     Though I'd still have to be careful with it also messing with with their respective saves and such, but it's an option. 
     \item I need to be way clearer and more consistent about bonus/penalty dice terminology.
     i.e. don't say "+1", but "one bonus dice"
+    \item Rename "Accounting" to "Bureaucracy"?
 }
 
 
