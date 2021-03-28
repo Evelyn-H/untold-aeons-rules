@@ -35,9 +35,9 @@
 
 %%% PARAGRAPHS
 %%%-----------
-% \setlength{\parskip}{0.5\baselineskip}
-% \setlength{\parindent}{0pt}
+\setlength{\parindent}{0pt}
 \nonzeroparskip % recommended by memoir
+% \setlength{\parskip}{0.5\baselineskip}
 
 
 %%% PAGE HEADERS
@@ -151,6 +151,7 @@
 \newcommand{\ulinegray}[1]{\textcolor{gray}{\uline{\textcolor{black}{#1}}}}
 \newcommand\underlinedhead[1]{\ulinegray{#1}}
 \setsubsecheadstyle{\large\scshape\bfseries\raggedright\underlinedhead}
+% \setsubsecheadstyle{\large\scshape\bfseries\raggedright}
 \setsubsubsecheadstyle{\normalsize\scshape\bfseries\raggedright}
 \setaftersubsubsecskip{1sp} % semi-hack to remove spacing after subsebsections (1sp is the smallest unit)
 
@@ -158,6 +159,13 @@
 %     \LARGE\scshape\bfseries\raggedright #1%
 %     % \vspace*{-\baselineskip-4pt}
 %     \rule[\baselineskip]{\textwidth}{0.4pt}\par
+%     \vspace*{-\baselineskip}
+% }
+% \setsecheadstyle{\ruledsec}
+% \newcommand{\ruledsec}[1]{
+%     \LARGE\scshape\bfseries\center #1%
+%     % \vspace*{-\baselineskip-4pt}
+%     \rule[\baselineskip]{0.8\textwidth}{0.4pt}\par
 %     \vspace*{-\baselineskip}
 % }
 % \setsecheadstyle{\ruledsec}

@@ -432,7 +432,8 @@ Any Advantages or Drawbacks rolled will result in a short term effect.
 \todoi{Move this to a separate "Coping Mechanisms" subsection}
 Whenever you gain Stress you also have to option to "project" it onto one of your bonds.
 This lets you temporarily draw strength from but you also damage the Bond in the process.
-If you choose to do so the stress gain is reduced by the rank of your Bond, 
+% If you choose to do so the stress gain is reduced by the rank of your Bond, 
+If you choose to do so the incoming stress is halved (rounding down), 
 and then the rank of the Bond is also reduced by one.
 % This lets you temporarily draw strength from but also risk damaging the Bond.
 % If you choose to do so you must make a check using one of your Bonds 
@@ -796,7 +797,7 @@ Drawback:
     Pistol          & 5     & Medium    & ...\\ 
     Heavy pistol    & 6     & Medium    & ...\\ 
     Shotgun         & 10    & Medium    & \footnotesize Full damage at Short range, \textonehalf\ at Medium range, and \textonequarter\ beyond that.\\
-    Submachine Gun  & 6     & Medium    & Full Auto\tnote{*}\\
+    Submachine Gun  & 5     & Medium    & Full Auto\tnote{*}\\
     Rifle           & 7     & Long      & ...\\
     % Heavy Rifle     & 8     & Long      & ...\\
 }{
@@ -806,9 +807,11 @@ Drawback:
 \subsection{Full Automatic Fire}
 You must choose to use full automatic mode before making your attack,
 and if you do so your attack suffers one additional penalty dice.
-If the attack succeeds you land one additional hit for every advantage you rolled. 
-Additional hits deal damage as usual.
-        
+% If the attack succeeds you land one additional hit for every advantage you rolled. 
+% Additional hits deal damage as usual.
+If the attack succeeds you land a number of hits equal to your number of successes (after cancelling them out).
+However, each hit \textit{only} deals damage equal to the weapons base damage (so no extra damage from the number of successes).    
+You \textit{can not} spend story points to turn an automatic fire shot into a critical hit.
 
 \chapter{Open Questions \& Feedback}
 { % little temp environment for this chapter
@@ -835,7 +838,7 @@ Additional hits deal damage as usual.
         %     \item Or... Story points for crits? This has potential! :p
         % }
     }
-    \item How to handle shotguns? No clue :p
+    % \item How to handle shotguns? No clue :p
     % \item Maybe get rid of item traits as a system:
     % \ul{
     %     \item work rapid-fire into the weapon ammo stat or something (like coc)
@@ -870,7 +873,7 @@ Additional hits deal damage as usual.
     \item Maybe let people roll for sanity with Mythos Knowledge instead of Willpower when it's appropriate
     \item Insanity: Fight, Flight, or Freeze (or Faint?)
     \item Idea: when you hit 2x limit you FFFF, (or \textit{just} faint?)
-    then once a minute(?) you make an unopposed willpower check and recover that much Stress.
+    then once a minute(?) you make an unopposed willpower check and recover that much Stress. (or just one stress / minute instead to make it a little more even?)
     Repeat until you go below 2xlimit again
     \item Also have a look at savage worlds with their "edges and hindrances"
     \item Bond idea: Bonds are 1-5, you can use them to lower Stress damage.
@@ -930,6 +933,8 @@ Additional hits deal damage as usual.
     \item I need to be way clearer and more consistent about bonus/penalty dice terminology.
     i.e. don't say "+1", but "one bonus dice"
     \item Rename "Accounting" to "Bureaucracy"?
+    \item Maybe remove the "+1 success" from the story point options and instead
+    give it a stress cost, like BitD does (p. 13)
 }
 
 
