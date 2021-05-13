@@ -123,14 +123,21 @@ After deciding on your Characteristics you should calculate your derived attribu
 
 \end{description}
 
-\section{Backgrounds}
-Your character's background represents how you make a living and what your expertise is.
-In more concrete terms, your background determines your starting professional skills you have access to,
-but doesn't have much direct influence on the game beyond that. 
+% \section{Backgrounds}
+% Your character's background represents how you make a living and what your expertise is.
+% In more concrete terms, your background determines your starting professional skills you have access to,
+% but doesn't have much direct influence on the game beyond that. 
 
-\todoi{more fluff and more example backgrounds (With a reference to more later in the book?)}
+% % \todoi{more fluff and more example backgrounds (With a reference to more later in the book?)}
 
-% \subsection{Example Backgrounds:}
+
+\section{Occupation}
+Your character's occupation represents how you make a living and what your expertise is.
+It doesn't have any direct influence on anything, 
+but when picking professional skills later on you're encouraged to 
+pick ones that fit your occupation. 
+
+\subsection{Example Occupations:}
 
 \newcommand{\makebackground}[3]{
     \noindent
@@ -180,14 +187,15 @@ but doesn't have much direct influence on the game beyond that.
 \end{multicols}
 
 \section{Starting Skills}
-After distributing points between your primary characteristics and picking a background
+After distributing points between your primary characteristics %and picking a background
 you can get started with developing your skills. This is done by spending Experience to improve your skills (as explained below). 
 
-Firstly, add all your background skills to your character sheet with a starting rank of 1 (unless they are already on there). 
+Firstly, you can add any 4 professional skills to your character sheet for free. 
+They all have a starting rank of 1.
+You can add even more professional skills if you want to, 
+but then you will have to pay the Experience cost to learn them (detailed below).
 % Then you can spend $30 + 4 \times Intellect$ Experience on any of your skills.
-Then you can spend 30 Experience, plus an additional $4 \times Intellect$ Experience, on any of your skills.
-If you want to add more professional skills on top of your background skills
-you will have to pay the cost to learn them.
+Then you can spend 30 Experience, plus an additional $4 \times Intellect$ Experience, to improve any of your skills.
 
 Note: you are \textit{not} allowed to improve your "Mythos Knowledge" skill during character creation.
 This can only be done during play. 
@@ -198,7 +206,7 @@ Experience is typically awarded by the Narrator at the end of every session (or 
 Improving a skill costs Experience equal to the \textit{current} rank in that skill.
 For example: \textit{if your Persuasion skill is currently rank 3, then it would cost 3 Experience to increase it to rank 4.}
 
-\subsection{Learning New Skills}
+\subsection{Learning New Skills} \label{leaning-skills}
 You can learn a new professional skill by spending 2 Experience to gain your first rank in your new skill.
 Though this is only possible if you have a source to learn from, this could be 
 a teacher (including other players), a book, or any other source of knowledge.
@@ -889,6 +897,11 @@ You \textit{can not} spend story points to turn an automatic fire shot into a cr
     % \item Move Dodge to it's own section instead of having it split between melee and ranged sections.
     \item double check CoC combat maneuvers to see if I wanna add something like that    
     \item maybe allow 1 extra maneuver / round for a certain stress cost (like Genesys)
+    \ul{
+        \item this could be extra interesting if you're allowed to do it at any time during the round,
+        not just during your own turn.
+        \item though maybe only as a reaction to someone else doing something, not in the middle of someone else's action
+    }
 }
     
 \subsection{Sanity \& Motivations}
