@@ -66,7 +66,7 @@ Bonuses and penalties also cancel each other out.
 % \end{itemize}
 
 There are 4 main characteristics that define your character, which all range from 1 to 5. 
-Each of them represents an aspect of your character. Sometimes they can be used like regular skills (e.g. an Intellect roll could be  instead also useused to solve a puzzle), 
+Each of them represents an aspect of your character. Sometimes they can be used like regular skills (e.g. an Intellect roll could be  instead also used to solve a puzzle), 
 but they're mostly used to influence other mechanics. 
 
 To create your character you must distribute 12 points between the 4 characteristics, 
@@ -81,7 +81,7 @@ with a minimum of 1 and maximum of 5 for each characteristic.
 
     \item[Toughness] 
     Your character's physical strength, endurance, and health.
-    It determines your Wound limit and Soak, generally making you capable of taking more hits in a fight.
+    It determines your Wound limit, generally making you capable of taking more hits in a fight.
 
     \item[Willpower]
     Your character's mental fortitide, discipline, drive, and ability to withstand stress.
@@ -193,12 +193,13 @@ Note: you are \textit{not} allowed to improve your "Mythos Knowledge" skill duri
 This can only be done during play. 
 
 \subsection{Improving Skills}
-To improve a skill -- or learn a new skill -- you need to spend Experience.
+To improve a skill you need to spend Experience.
 Experience is typically awarded by the Narrator at the end of every session (or plot arc).
 Improving a skill costs Experience equal to the \textit{current} rank in that skill.
 For example: \textit{if your Persuasion skill is currently rank 3, then it would cost 3 Experience to increase it to rank 4.}
 
-To learn a new professional skill you have to spend 2 Experience to gain your first rank in your new skill.
+\subsection{Learning New Skills}
+You can learn a new professional skill by spending 2 Experience to gain your first rank in your new skill.
 Though this is only possible if you have a source to learn from, this could be 
 a teacher (including other players), a book, or any other source of knowledge.
 % Then you must spend 2 Experience to gain your first rank in your new skill.
@@ -247,23 +248,10 @@ and they aren't listed on the character sheet by default.
 They're usually more specialised and unique skills.
 
 \section{Standard Skills}
-Standard skills are skills that every character possesses (at least at a basic level),
+Standard skills are skills that every character possesses (at least at a basic level of competency),
 and have a starting rank of 1. 
 Professional skills are skills that must be learned either in character creation or during play,
 therefore these have a starting rank of 0. 
-
-\fancytable[1.5]{m{1in}m{1in}m{1in}}
-{
-    \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
-}{
-    Alertness & Charm & Brawl\\
-    Driving & Deception & Firearms\\
-    First Aid & Insight\\
-    Investigation & Intimidation\\
-    Stealth & Persuasion\\
-    Streetwise\\
-    Survival\\
-}{}
 
 \section{Professional Skills}
 Professional skills can be just about anything you want, 
@@ -273,22 +261,47 @@ which is done in parentheses after the skill.
 (These are also marked in the list by having "\textit{(Specific)}" after the skill.)
 \textit{E.g. "Knowledge (Biology)"}
 
-\fancytable[1.5]{lll}
-{
-    % \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
-}{
-    Accounting                      & History                       & Occult                \\
-    Animal Handling                 & Knowledge \textit{(Specific)} & Psychoanalysis        \\
-    Craft \textit{(Specific)}       & Language \textit{(Specific)}  & Sleight of Hand       \\
-    Disguise                        & Law                           & \\
-    Electronics                     & Locksmithing                  & \\
-    Heavy Machinery                 & Medicine                      & \\
-}{}
-
-While this list is trying to include the most common professional skills an investigator might have,
+While the list of professional skills is trying to include the most common ones an investigator might have,
 it is by no means meant to be complete.
 If you think your character should have a skill that is not listed here
 you can absolutely use that as long as you discuss this with your Narrator beforehand.
+
+\clearpage
+\begin{minipage}{\linewidth}
+    \let\oldsecheadstyle\secheadstyle
+    \setsecheadstyle{\oldsecheadstyle\centering}
+    \section{List of Skills}
+        \begin{center}
+            \vspace{\topskip}
+            {\subsecheadstyle{Standard Skills}}
+            \fancytable[1.5]{m{1.3in}m{1.3in}m{1.3in}}
+            {
+                \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
+            }{
+                Alertness & Charm & Brawl\\
+                Driving & Deception & Firearms\\
+                First Aid & Insight\\
+                Investigation & Intimidation\\
+                Stealth & Persuasion\\
+                Streetwise\\
+                Survival\\
+            }{}
+        
+            \vspace{2\topskip}
+            {\subsecheadstyle{Professional Skills}}
+            \fancytable[1.5]{m{1.3in}m{1.3in}m{1.3in}}
+            {
+                % \thead[l]{General} & \thead[l]{Social} & \thead[l]{Combat}\\
+            }{
+                Accounting                      & History                       & Occult                \\
+                Animal Handling                 & Knowledge \textit{(Specific)} & Psychoanalysis        \\
+                Craft \textit{(Specific)}       & Language \textit{(Specific)}  & Sleight of Hand       \\
+                Disguise                        & Law                           & \\
+                Electronics                     & Locksmithing                  & \\
+                Heavy Machinery                 & Medicine                      & \\
+            }{}
+        \end{center}
+\end{minipage}
 
 % \begin{multicols}{3}
 %     \begin{itemize}[
