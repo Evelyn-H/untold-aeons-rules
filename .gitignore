@@ -14,6 +14,8 @@
 !source/*.tex
 !images/*
 
+!make-booklet.sh
+
 # ...even if they are in subdirectories
 !*/
 
