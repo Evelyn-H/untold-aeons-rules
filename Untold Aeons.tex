@@ -48,12 +48,13 @@
 \usepackage[italic, defaultmathsizes]{mathastext} % makes math use Alegreya as much as possible
 
 % internal hyperlinks
-\usepackage[pdfusetitle, hidelinks]{hyperref}   % Internal hyperlinks
+\usepackage[pdfusetitle, hidelinks, pdfview=Fit]{hyperref}   % Internal hyperlinks
 \hypersetup{
     pdfborder={0 0 0},      % No borders around internal hyperlinks
     linktoc=all
 }
 \usepackage{memhfixc}   % some memoir - hyperref fix
+% \usepackage{bookmark}
 
 \usepackage[toc]{multitoc}
 \renewcommand*{\multicolumntoc}{2}
@@ -94,6 +95,11 @@
     %%% TITLE PAGE
     %%%-----------
     % \setcounter{page}{0}
+
+    \frontmatter
+    \def\thepage{Cover} % this sets the page label for the bookmark to "Cover"
+    \pdfbookmark{Front Matter}{frontmatter}
+
     \titlingpageend{\clearforchapter}{\clearforchapter}
     \begin{titlingpage*} % the starred version doesn't reset the page number
         \begin{center}
@@ -107,10 +113,58 @@
         \end{center}
     \end{titlingpage*}
 
-    % \frontmatter
-    % \maketitle
-    % \clearpage
-    % \mainmatter
+    \clearpage
+    \mainmatter % resets the page numbers and swithces them to regular numbering style
+
+    %%% THANKS PAGE
+    %%%------------
+    \belowpdfbookmark{Credits}{credits}
+    \chapter*{Credits}
+    \thispagestyle{empty} % remove bottom page number
+    \newcommand{\creditsname}[1]{{\Large\scshape\textbf{#1}}}
+    {
+        \setlength{\columnseprule}{0pt}
+        \raggedcolumns
+
+        \begin{vplace}
+            \begin{center}
+                \creditsname{Evelyn Hobert}\\
+                \textit{Game Design, Writing, and Layout}
+            \end{center}
+        \end{vplace}
+    
+        % \vspace*{\fill}
+        
+        \section*{Thanks}
+        % \subsubsection{Playtesters}
+        Thank you to everyone who helped me with playtesting and providing valuable feedback!
+        \begin{multicols}{3}
+            \begin{itemize}[wide, label={}, itemindent=0pt, before=\itshape]
+                \item Gabriel Reich %2Boots \textit{(@too\_boots\#8000)}
+                \item Wayne %\textit{(@Wayne Rossi\#2400)}
+                % \item Kyle Scott \textit{(@Lord of the Kyles\#1817)}
+                % \item Morgan J \textit{(@Morgan J\#3848)}
+                \item ... and others
+            \end{itemize}
+        \end{multicols}
+        
+        \section*{Aknowledgments}
+        \textit{Untold Aeons} was inspired by many systems, including:
+        \begin{multicols}{3}
+            \begin{itemize}[wide, label={}, itemindent=0pt, before=\itshape]
+                \item Call of Cthulhu
+                \item Pulp Cthulhu
+                \item Delta Green
+                \item Genesys
+                \item Trail of Cthulhu
+                \item Mothership
+                \item Unknown Armies
+                \item ... and more
+            \end{itemize}
+        \end{multicols}
+    }
+
+    \clearpage
 
     %%% TABLE OF CONTENTS
     %%%------------------
@@ -134,7 +188,10 @@
         % \setlength{\afterchapskip}{1\baselineskip}
         % \let\oldchapterheadstart\chapterheadstart
         % \renewcommand{\chapterheadstart}{\vspace*{-5\baselineskip-1\topskip}}
+
+        \belowpdfbookmark{\contentsname}{toctarget}
         \tableofcontents* % the starred version doesn't list the TOC in the TOC
+        \thispagestyle{empty} % remove bottom page number
         \clearpage
         % \renewcommand{\chapterheadstart}{\oldchapterheadstart}
         
