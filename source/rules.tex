@@ -26,8 +26,8 @@ Successes and failures are counted as follows:
 }{
     \textbf{6} & 2 Successes & 2 Failures\\
     \textbf{5} & 1 Success & 1 Failure\\
-    \textbf{4} & 1 Success & 1 Failure\\
-    % \textbf{4} & & \\
+    % \textbf{4} & 1 Success & 1 Failure\\
+    \textbf{4} & & \\
     \textbf{3} & & \\
     \textbf{2} & & \\
     \textbf{1} & 1 Advantage & 1 Drawback\\
@@ -438,14 +438,18 @@ There's a number of things you can spend Story Points on:
     
 \chapter{Stress \& Sanity}
 
-Instead of a Sanity number, characters just have permanent side effects (manias, phobias, ...) when stress goes above the limit. These can then be roleplayed and can also change over time. (e.g. "recovering in a mental ward" as a way to getting rid of them)
+\note{Instead of a Sanity number, characters just have permanent side effects (manias, phobias, ...) when stress goes above the limit. These can then be roleplayed and can also change over time. (e.g. "recovering in a mental ward" as a way to getting rid of them)}
+
+\todoi{Add an intro explaining Stress. (and maybe rename all uses of "Sanity" by "Stress")}
 
 \section{Sanity Checks}
 When something happens that could cause distress to a character 
 the Narrator may ask for a "Sanity Check" to see how they react.
 Sanity checks always use the character's Willpower, and the difficulty of the check will be set based on the severity of the cause. 
-Any Advantages or Drawbacks rolled will result in a short term effect.
+Usually any Advantages or Drawbacks rolled will result in an instantaneousor short-term effect. Though if they're Shaken (see \autopageref{shaken}) then the effects will be more permanent or long-term.
 
+\todoi{Be clearer about how to resolve Advantages and Drawbacks}
+\todoi{Replace this table with some text instead.}
 \fancytable[1.5]{lm{3in}}
 {
     & \thead{Effects}\\
@@ -456,45 +460,29 @@ Any Advantages or Drawbacks rolled will result in a short term effect.
     \textbf{Drawback} & Scream in terror, involuntary action in combat, freeze, ...\\
 }{}
 
-\label{sanity-bonds}
-\todoi{Move this to a separate "Coping Mechanisms" subsection}
-Whenever you gain Stress you also have to option to "project" it onto one of your bonds.
-This lets you temporarily draw strength from but you also damage the Bond in the process.
-% If you choose to do so the stress gain is reduced by the rank of your Bond, 
-If you choose to do so the incoming stress is halved (rounding down), 
-and then the rank of the Bond is also reduced by one.
-% This lets you temporarily draw strength from but also risk damaging the Bond.
-% If you choose to do so you must make a check using one of your Bonds 
-% with a difficulty equal the amount of stress you're gaining.
-% Regardless of whether you fail or succeed this roll, the incoming stress will be reduced by the rank of your Bond,
-% If you fail the Bond will also be reduced by one. 
-If the rank of your Bond reaches 0 you lose it entirely.
-
 \subsection{Reaching Your Limit}
-If your Stress goes above your limit you must make a check using one of your Bonds with 1 difficulty dice for each point you are above your limit.
-If you succeed nothing happens, though you must roll again if you gain more stress,
-but if you fail you become Shaken.
+% If your Stress goes above your limit you must make a check using one of your Bonds with 1 difficulty dice for each point you are above your limit.
+If your Stress goes above your limit you must make a Willpower check with 1 difficulty dice for each point you are above your limit.
+If you succeed nothing happens, though you must roll again if you gain more stress.
+If you fail you become Shaken.
 
 You must do the same if your Stress goes above \textit{twice} your limit.
-If you fail this check you go temporarily insane or fall unconsious.
-\note[Idea]{Fight, Flight, or Freeze?}
+If you fail this check you must choose either \textit{Fight}, \textit{Flight}, or \textit{Freeze}. You then remain in the state you chose and lose one Stress per minute until your Stress goes below twice your limit again.
 
 % If your Stress goes above \textit{twice} limit make an Willpower save or go temporarily insane / fall unconsious.
 % This follows the same pattern as the save for becoming Shaken. So the difficulty is how far you're above your limit (twice the limit in this case), and failing the save makes it happen while succeeding postpones it a bit.
 
-
-\subsection{Shaken}
+\subsection{Becoming Shaken} \label{shaken}
 \textit{The goal should be to give the players an "oh no..." feeling when they become shaken.}
 
-When you initially become Shaken you suffer from a temporary bout of madness. 
-You are free to roleplay this however you like. 
-Additionally, the Narrator can also use Story points to trigger 
-phobias, manias, delusions, ... for Shaken characters.
-
+% When you initially become Shaken you suffer from a temporary bout of madness. 
+% You are free to roleplay this however you like. 
+% Additionally, the Narrator can also use Story points to trigger 
+% phobias, manias, delusions, ... for Shaken characters.
 
 While shaken the effects of any Advantages or Drawbacks you roll on a Sanity check become amplified.
 Drawbacks might cause you to flee in terror, become catatonic or even gain a phobia or mania.
-On the other hand, if you roll an Advantage on a Sanity check with a difficulty \textit{higher}
+On the other hand, if you get an Advantage on a Sanity check with a difficulty \textit{higher}
 than your relevant Hardened level your Hardened level increases by one.
 
 
@@ -510,10 +498,32 @@ than your relevant Hardened level your Hardened level increases by one.
 %     \end{itemize}
 % \end{itemize}
 
-\section{Adapting to horror}
+\section{Coping Mechanisms}
+
+\subsection{Bonds} \label{sanity-bonds}
+Whenever you gain Stress you also have to option to "project" it onto one of your bonds.
+This lets you temporarily draw strength from but you also damage the Bond in the process.
+% If you choose to do so the stress gain is reduced by the rank of your Bond, 
+If you choose to do so the incoming stress is halved (rounding down), 
+and then the rank of the Bond is also reduced by one.
+% This lets you temporarily draw strength from but also risk damaging the Bond.
+% If you choose to do so you must make a check using one of your Bonds 
+% with a difficulty equal the amount of stress you're gaining.
+% Regardless of whether you fail or succeed this roll, the incoming stress will be reduced by the rank of your Bond,
+% If you fail the Bond will also be reduced by one. 
+If the rank of your Bond reaches 0 you lose it entirely.
+
+\subsection{Fainting}
+Whenever you gain Stress you can also choose to faint and only gain one Stress instead of the full value. You remain unconsious for a number of minutes equal to the original Stress you would've taken.
+
+\subsection{Trauma}
+\todoi{Make rules for this!}
+
+\subsection{Adapting to Horror}
+Over time you can also adapt to horrors, this is represented by Hardened levels.
 
 Hardened levels represent how used your character is to seeing different kinds of horrors.
-There's 3 categories: \textit{Violence}, \textit{Helplessness}, and \textit{Unnatural}.
+There's 4 categories: \textit{Violence}, \textit{Helplessness}, \textit{Self}, and \textit{Unnatural}.
 These levels act like the mental equivalent of armor, reducing the stress "damage" 
 you take by your hardened level in the relavant category.
 
@@ -927,6 +937,7 @@ You \textit{can not} spend story points to turn an automatic fire shot into a cr
         \item though maybe only as a reaction to someone else doing something, not in the middle of someone else's action
         \item could also do it for a story point cost instead
     }
+    \item Maybe I should add some rules for permanent injuries... mostly just for RP reasons. Maybe something like: ">= 1/2 wound limit in one hit => permanent injury"
 }
     
 \subsection{Sanity \& Motivations}
@@ -1023,6 +1034,9 @@ You \textit{can not} spend story points to turn an automatic fire shot into a cr
     % \item Make story points player-facing only instead of having a GM pool too
     % \item and give players story points for RPing character flaws / traumas
     % \item (look at Cortex for this)
+    \item See if successes on 4 or nothing on 4 is best.
+    I'm leaning towards nothing on 4 for simplicity and to make high difficulties less punishing, but it might make rolls with fewer dice less "eventful" sometimes by rolling more blanks.
+    \item Should I make clear in the rules that advantages / drawbacks aren't solely the responsibility of the GM and players can (and should!) come up with the results of them too
 }
 }
 

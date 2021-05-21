@@ -42,7 +42,7 @@
 
 \usepackage{xifthen} % for easy-to-use conditionals (specifically \ifthenelse)
 \usepackage{xcolor} % rainbows!
-\usepackage{enumitem} % lists
+\usepackage[inline]{enumitem} % lists
 \setlist{itemsep=0.25ex}
 
 \usepackage[italic, defaultmathsizes]{mathastext} % makes math use Alegreya as much as possible
@@ -104,17 +104,16 @@
     \begin{titlingpage*} % the starred version doesn't reset the page number
         \begin{center}
             \vspace*{2in}
-            \HUGE \textsc{\textbf{\thetitle}}
-            % \vspace{0.5cm}
-            % Thesis Subtitle
-            % \vspace{1.5cm}
+            % \begin{vplace}
+                \HUGE \textsc{\textbf{\thetitle}}
+            % \end{vplace}
             \vfill
             \tiny \theauthor \par \today
         \end{center}
     \end{titlingpage*}
 
     \clearpage
-    \mainmatter % resets the page numbers and swithces them to regular numbering style
+    \mainmatter % resets the page numbers and switches them to regular numbering style
 
     %%% THANKS PAGE
     %%%------------
@@ -140,24 +139,40 @@
         Thank you to everyone who helped me with playtesting and provided valuable feedback!
         \begin{multicols}{3}
             \begin{itemize}[wide, label={}, itemindent=0pt, before=\itshape]
-                \item Gabriel Reich %2Boots \textit{(@too\_boots\#8000)}
+                \item Gabriel Reich
                 \item Isabel Haynes
                 \item Alesha Eble
                 \item Morgan Joeck
-                \item Wayne Rossi %\textit{(@Wayne Rossi\#2400)}
+                \item Wayne Rossi
                 \item ... and others
             \end{itemize}
         \end{multicols}
+
+        % \begin{itemize}[wide, label={}, itemindent=0pt, before=\itshape]
+        %     \begin{multicols}{3}
+        %         \item Gabriel Reich %2Boots \textit{(@too\_boots\#8000)}
+        %         \item Isabel Haynes
+        %         \item Alesha Eble
+        %     \end{multicols}
+        %     \vspace{-3\multicolsep}
+        %     \vspace{\baselineskip + \parsep + \itemsep}
+        %     \begin{multicols}{3}
+        %         \item Morgan Joeck
+        %         \item Wayne Rossi %\textit{(@Wayne Rossi\#2400)}
+        %         \item ... and others
+        %     \end{multicols}
+        % \end{itemize}
         
         \section*{Aknowledgments}
         \textit{Untold Aeons} was inspired by many systems, including:
         \begin{multicols}{3}
             \begin{itemize}[wide, label={}, itemindent=0pt, before=\itshape]
-                \item Call of Cthulhu
+                \item Call of Cthulhu %7e, by Sandy Petersen et al.
                 \item Pulp Cthulhu
                 \item Delta Green
                 \item Genesys
                 \item Trail of Cthulhu
+                \item Blades in the Dark
                 \item Mothership
                 \item Unknown Armies
                 \item ... and more
